@@ -80,7 +80,7 @@
 
               <!-- Modal body -->
               <div class="modal-body">
-                 <form>
+                 <form runat="server">
                       <div class="form-group">
                         <label for="email">Email address:</label>
                         <input type="email" class="form-control" id="email">
@@ -94,7 +94,7 @@
                           <input class="form-check-input" type="checkbox"> Remember me
                         </label>
                       </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" Text="Login"></asp:Button>
                     </form> 
               </div>
 
