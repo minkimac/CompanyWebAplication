@@ -3,33 +3,65 @@
 <asp:Content ID="Carousel1" ContentPlaceHolderID="Carousel1" runat="server">
     <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="http://hdwbay.com/wp-content/uploads/2017/12/green-tree-nature-image-1920x768.jpg" alt="Los Angeles">
-    </div>
-    <div class="carousel-item">
-      <img src="https://lh4.googleusercontent.com/-TqtuxOXaAOE/UMhTUoxZggI/AAAAAAAABzY/lBP6hIS58hw/s1366/QTBN1-1366x546.jpg" alt="Chicago">
-    </div>
-    <div class="carousel-item">
-      <img src="http://img1.tebyan.net/Big/1389/10/4524223416318023211612043816510144533166.jpg" alt="New York">
-    </div>
-  </div>
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="http://hdwbay.com/wp-content/uploads/2017/12/green-tree-nature-image-1920x768.jpg" alt="Los Angeles">
+            </div>
+            <div class="carousel-item">
+              <img src="https://lh4.googleusercontent.com/-TqtuxOXaAOE/UMhTUoxZggI/AAAAAAAABzY/lBP6hIS58hw/s1366/QTBN1-1366x546.jpg" alt="Chicago">
+            </div>
+            <div class="carousel-item">
+              <img src="http://img1.tebyan.net/Big/1389/10/4524223416318023211612043816510144533166.jpg" alt="New York">
+            </div>
+          </div>
 
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+    </div>
+</asp:Content>
 
-</div>
+<asp:Content ID="Content1" ContentPlaceHolderID="Carousel2" runat="server">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="http://hdwbay.com/wp-content/uploads/2017/12/green-tree-nature-image-1920x768.jpg" alt="Los Angeles">
+            </div>
+            <div class="carousel-item">
+              <img src="https://lh4.googleusercontent.com/-TqtuxOXaAOE/UMhTUoxZggI/AAAAAAAABzY/lBP6hIS58hw/s1366/QTBN1-1366x546.jpg" alt="Chicago">
+            </div>
+            <div class="carousel-item">
+              <img src="http://img1.tebyan.net/Big/1389/10/4524223416318023211612043816510144533166.jpg" alt="New York">
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+    </div>
 </asp:Content>
