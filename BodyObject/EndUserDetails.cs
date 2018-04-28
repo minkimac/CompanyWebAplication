@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace BodyObject
 {
-    public class Class1
+    public class EndUserDetails
     {
+        string UserType;
+
     }
 }

@@ -19,8 +19,6 @@ namespace CompanyWebAplication
 
             using (SqlConnection con = new SqlConnection(cs))
             {
-                con.Open();
-                Response.Write("coinnection is open");
             }
             
             
