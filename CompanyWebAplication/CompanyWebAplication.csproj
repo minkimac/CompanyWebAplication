@@ -111,6 +111,7 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
+    <Content Include="JavaScript\JavaScript.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -160,7 +161,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service.asmx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebService\WebService1.asmx" />
@@ -178,6 +181,7 @@
       <DependentUpon>Service.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utility.cs" />
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

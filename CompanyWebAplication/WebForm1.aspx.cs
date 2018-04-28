@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
+using MyConnection;
 
 namespace CompanyWebAplication
 {
@@ -11,6 +15,17 @@ namespace CompanyWebAplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string cs = Utility.ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+                con.Open();
+                Response.Write("coinnection is open");
+            }
+            
+            
+
+
 
         }
     }
