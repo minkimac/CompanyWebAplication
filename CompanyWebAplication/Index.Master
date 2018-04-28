@@ -95,11 +95,12 @@
     </style>
 </head>
 
-<body onscroll="">
+<body>
+    <div class="container-fluid bg-dark" style="height:10px;"></div>
     <div class="container-fluid">
         <!--Header start-->
          <div class="container-fluid p-0" data-spy="affix" data-offset-top="205" id="header">
-            <div class="row bg-dark card-header  " style="height:auto;">
+            <div class="row bg-dark p-2" style="height:auto;">
                 <div class="col-lg-2 col-md-3 text-sm-center">
                     <a href="WebForm1.aspx" >
                         <img class="img-fluid" role="link" src="Assets/Company_logo.png"  />
@@ -116,7 +117,7 @@
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
                         <a href="#" class=" btn btn-primary" role="button">
-                          <span class="fas fa-user-plus flex-sm-fill">Sign up</span>
+                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#registrationModal">Sign up</span>
                         </a>
                         <a href="#" class=" btn btn-primary " role="button" data-toggle="modal" data-target="#loginModal" >
                           <span class="fas fa-user flex-sm-fill">&nbspLogin</span>
@@ -223,6 +224,60 @@
             </div>
           </div>
         </div>
+        <!--Login Modal End-->
+        
+        <!--Register user Modal Start-->
+        <div class="modal multi-step" id="registrationModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title step-1" data-step="1">Step 1</h4>
+                        <h4 class="modal-title step-2" data-step="2">Step 2</h4>
+                        <h4 class="modal-title step-3" data-step="3">Final Step</h4>
+                        <div class="m-progress">
+                            <div class="m-progress-bar-wrapper">
+                                <div class="m-progress-bar">
+                                </div>
+                            </div>
+                            <div class="m-progress-stats">
+                                <span class="m-progress-current">
+                                </span>
+                                /
+                                <span class="m-progress-total">
+                                </span>
+                            </div>
+                            <div class="m-progress-complete">
+                                Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body step-1" data-step="1">
+                        This is step 1.
+                    </div>
+                    <div class="modal-body step-2" data-step="2">
+                        This is the second step.
+                    </div>
+                    <div class="modal-body step-3" data-step="3">
+                        This is the final step.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
+                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Continue</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="Scripts/multi-step-modal.js"></script>
+        <script>
+        sendEvent = function(sel, step) {
+            $(sel).trigger('next.m.' + step);
+        }
+        </script>
+        <!--registration modal end-->
     </div>
 </body>
 

@@ -114,6 +114,7 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <Content Include="JavaScript\JavaScript.js" />
+    <Content Include="Scripts\multi-step-modal.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
