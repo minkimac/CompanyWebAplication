@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="CompanyWebAplication.WebForm1" %>
 
 <asp:Content ID="Carousel1" ContentPlaceHolderID="Carousel1" runat="server">
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="" class="carousel slide" data-ride="carousel">
 
           <!-- Indicators -->
           <ul class="carousel-indicators">
@@ -32,7 +32,7 @@
           </a>
     </div>
 </asp:Content>
-<%--m chmcmgvm--%>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="Carousel2" runat="server">
     <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -45,15 +45,32 @@
 
           <!-- The slideshow -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="http://hdwbay.com/wp-content/uploads/2017/12/green-tree-nature-image-1920x768.jpg" alt="Los Angeles">
+            <div class="row">
+            <div class="col-sm-4">
+              <div class="card testimonial">
+                  <h3 class="testimonial-header">Name 1</h3>
+                  <div class="testimonial-content">
+                      vfvbdvhbhjsbvhjasbvhjbvhjsbvhjsbvhjsbdvhjbsvhjsvbshjvbbvjsdbvlsvjhbsvjlsbvhjbsvvldvsdvvvbreberbereebebrerberberabae
+                  </div>
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="https://lh4.googleusercontent.com/-TqtuxOXaAOE/UMhTUoxZggI/AAAAAAAABzY/lBP6hIS58hw/s1366/QTBN1-1366x546.jpg" alt="Chicago">
+            <div class="col-sm-4">
+              <div class="card testimonial">
+                  <h3 class="testimonial-header">Name 2</h3>
+                  <div class="testimonial-content">
+                      vfvbdvhbhjsbvhjasbvhjbvhjsbvhjsbvhjsbdvhjbsvhjsvbshjvbbvjsdbvlsvjhbsvjlsbvhjbsvvldvsdvvvbreberbereebebrerberberabae
+                  </div>
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="http://img1.tebyan.net/Big/1389/10/4524223416318023211612043816510144533166.jpg" alt="New York">
+            <div class="col-sm-4">
+                <div class="card testimonial">
+                  <h3 class="testimonial-header">Name 3</h3>
+                  <div class="testimonial-content">
+                      vfvbdvhbhjsbvhjasbvhjbvhjsbvhjsbvhjsbdvhjbsvhjsvbshjvbbvjsdbvlsvjhbsvjlsbvhjbsvvldvsdvvvbreberbereebebrerberberabae
+                  </div>
+                </div>
             </div>
+          </div>
           </div>
 
           <!-- Left and right controls -->

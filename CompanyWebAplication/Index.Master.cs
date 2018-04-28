@@ -11,7 +11,11 @@ namespace CompanyWebAplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var isMobile = Request.Browser.IsMobileDevice;
+            if (isMobile)
+            {
 
+            }
         }
     }
 }

@@ -71,6 +71,7 @@
     <Content Include="App_Data\Company_logo.png" />
     <Content Include="App_Data\friendslogo.png" />
     <Content Include="App_Data\Nandkishor.jpg" />
+    <Content Include="Assets\bandmember.jpg" />
     <Content Include="Assets\Company_logo.png" />
     <Content Include="Assets\FontAwesome\css\fa-brands.css" />
     <Content Include="Assets\FontAwesome\css\fa-brands.min.css" />
@@ -91,6 +92,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Global.css" />
     <Content Include="Index.Master" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
@@ -128,6 +130,7 @@
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\GlobalJS.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -162,7 +165,6 @@
     <Content Include="Service.asmx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
-    <Content Include="WebForm2.aspx" />
     <Content Include="WebService\WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -184,13 +186,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebService\WebService1.asmx.cs">
       <DependentUpon>WebService1.asmx</DependentUpon>

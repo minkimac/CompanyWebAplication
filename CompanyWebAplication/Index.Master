@@ -9,23 +9,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Global.css" rel="stylesheet" />
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
     <link href="Assets/FontAwesome/css/fontawesome-all.css" rel="stylesheet" />
     <script type="text/javascript">
 
-        $(document).ready(function(){
+        $(document).ready(function ()
+        {
 
-            $("#loginModal").on('shown.bs.modal', function(){
+            $("#loginModal").on('shown.bs.modal', function ()
+            {
 
                 $(this).find('#email').focus();
 
             });
 
+            unStickMobileFooter();
         });
 
+        function unStickMobileFooter()
+        {
+            var isMobile = detectmob();
+
+            if (isMobile)
+            {
+                var footer = document.getElementById('footer');
+                footer.classList.remove('fixed-bottom');
+            }
+        }
+
+        function detectmob()
+        {
+             if( navigator.userAgent.match(/Android/i)
+             || navigator.userAgent.match(/webOS/i)
+             || navigator.userAgent.match(/iPhone/i)
+             || navigator.userAgent.match(/iPad/i)
+             || navigator.userAgent.match(/iPod/i)
+             || navigator.userAgent.match(/BlackBerry/i)
+             || navigator.userAgent.match(/Windows Phone/i)
+             )
+             {
+                return true;
+             }
+             else
+             {
+                return false;
+             }
+        }
+
+        
     </script>
+
     <style>
         *
         {
@@ -41,9 +77,10 @@
     </style>
 </head>
 
-<body>
+<body onscroll="">
     <div class="container-fluid">
-         <div class="container-fluid p-0" data-spy="affix" data-offset-top="205" id="header" >
+        <!--Header start-->
+         <div class="container-fluid p-0" data-spy="affix" data-offset-top="205" id="header">
             <div class="row bg-dark card-header  " style="height:auto;">
                 <div class="col-lg-2 col-md-3 text-sm-center">
                     <a href="WebForm1.aspx" >
@@ -70,6 +107,26 @@
                 </div>
             </div>
         </div>
+        <!--Header end-->
+
+        <script>
+            window.onscroll = function() {toggleFixedHeader()};
+
+            // Get the header
+            var header = document.getElementById("header");
+
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
+
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function toggleFixedHeader() {
+              if (window.pageYOffset >= sticky) {
+                header.classList.add("fixed-top");
+              } else {
+                header.classList.remove("fixed-top");
+              }
+            } 
+        </script>
 
         <div class="container-fluid">
             <asp:ContentPlaceHolder ID="Carousel1" runat="server">
@@ -82,8 +139,28 @@
 
             </asp:ContentPlaceHolder>
         </div>
-                
-        <!-- Button to Open the Modal -->\
+                     
+        <!--Footer start-->
+         <footer class="container-fluid p-0" id="footer" >
+            <div class="row bg-dark card-footer">
+                <div class="col-lg-4 col-md-3 col-12 text-sm-center">
+                    Copyright NutScrew
+                </div>
+                <div class="col-lg-4 col-md-9 col-12 h3 align-self-center container-fluid">
+                    Nutscrew
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
+                    <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
+                        <a href="#" class=" btn btn-primary" role="banner">
+                          <span class="fas fa-user-plus flex-sm-fill">facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Footer end-->
+        
+        <!-- Button to Open the Modal -->
 
         <!-- The Modal -->
         <div class="modal fade" id="loginModal" onclose="(){window.opener.location.href = window.opener.location.href;}">
@@ -118,7 +195,8 @@
               </div>
 
               <!-- Modal footer -->
-              <div class="modal-footer">
+ 
+              <div class="modal-footer position-fixed">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               </div>
 
