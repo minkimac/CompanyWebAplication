@@ -17,5 +17,10 @@ namespace CompanyWebAplication
 
             }
         }
+
+        protected void txt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
