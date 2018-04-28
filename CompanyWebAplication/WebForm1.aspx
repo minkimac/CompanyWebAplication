@@ -1,13 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="CompanyWebAplication.WebForm1" %>
 
 <asp:Content ID="Carousel1" ContentPlaceHolderID="Carousel1" runat="server">
-    <div id="" class="carousel slide" data-ride="carousel">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
 
           <!-- Indicators -->
           <ul class="carousel-indicators">
-            <li data-target="#demo" data-slide-to="0" class="active"></li>
-            <li data-target="#demo" data-slide-to="1"></li>
-            <li data-target="#demo" data-slide-to="2"></li>
+            <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel1" data-slide-to="1"></li>
+            <li data-target="#carousel1" data-slide-to="2"></li>
           </ul>
 
           <!-- The slideshow -->
@@ -24,10 +24,10 @@
           </div>
 
           <!-- Left and right controls -->
-          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
             <span class="carousel-control-prev-icon"></span>
           </a>
-          <a class="carousel-control-next" href="#demo" data-slide="next">
+          <a class="carousel-control-next" href="#carousel1" data-slide="next">
             <span class="carousel-control-next-icon"></span>
           </a>
     </div>

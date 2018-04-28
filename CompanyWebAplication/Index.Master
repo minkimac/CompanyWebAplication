@@ -13,7 +13,6 @@
     <script src="Scripts/jquery-3.3.1.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
-    <script src="JavaScript/JavaScript.js"></script>
     <link href="Assets/FontAwesome/css/fontawesome-all.css" rel="stylesheet" />
     <script type="text/javascript">
 
@@ -226,14 +225,19 @@
         </div>
         <!--Login Modal End-->
         
+        <!-- #region Test -->
         <!--Register user Modal Start-->
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title step-1" data-step="1">Step 1</h4>
-                        <h4 class="modal-title step-2" data-step="2">Step 2</h4>
-                        <h4 class="modal-title step-3" data-step="3">Final Step</h4>
+                        <h4 class="modal-title step-1" data-step="1">Account details</h4>
+                        <h4 class="modal-title step-2" data-step="2">Personal information</h4>
+                        <h4 class="modal-title step-3" data-step="3">Where do you live?</h4>
+                        <h4 class="modal-title step-4" data-step="4">Contact information</h4>
+                        <h4 class="modal-title step-5" data-step="5">Verification</h4>
+                        <h4 class="modal-title step-6" data-step="6">Terms and conditions</h4>
+                        <h4 class="modal-title step-7" data-step="7">Success</h4>
                         <div class="m-progress">
                             <div class="m-progress-bar-wrapper">
                                 <div class="m-progress-bar">
@@ -242,7 +246,6 @@
                             <div class="m-progress-stats">
                                 <span class="m-progress-current">
                                 </span>
-                                /
                                 <span class="m-progress-total">
                                 </span>
                             </div>
@@ -251,21 +254,99 @@
                             </div>
                         </div>
                     </div>
-                    <div class="modal-body step-1" data-step="1">
-                        This is step 1.
+                    <div class="modal-body step-1" data-step="1" runat="server">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="txtRegisterEmail" placeholder="Email" onkeyup="checkInput()" runat="server"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtLoginID_Username" placeholder="Set a username" runat="server"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="txtPassword" placeholder="Set a password" runat="server"/> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Re-enter the password" runat="server"/> 
+                        </div>
                     </div>
                     <div class="modal-body step-2" data-step="2">
-                        This is the second step.
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtFirstName" placeholder="First name" runat="server"/> 
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtMiddleName" placeholder="Middle name" runat="server"/> 
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="txtLastName" placeholder="Last name" runat="server"/>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" ID="ddlGender" runat="server">
+                                <option hidden selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>  
                     </div>
                     <div class="modal-body step-3" data-step="3">
+                        <div class="row">
+                            <div class="m-3 p-1">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtHouseNumber" placeholder="Flat/House no." runat="server"/> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtState" placeholder="State" runat="server"/>
+                                </div>
+                            </div>
+                            <div class="m-3 p-1">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtStreet" placeholder="Street/Locality" runat="server"/> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server"/> 
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="txtLandmark" placeholder="Landmark" runat="server"/>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" ID="ddlCountry" runat="server">
+                                        <option hidden selected>Select country</option>
+                                    </select>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body step-4" data-step="4">
+                        This is the fourth step.
+                    </div>
+                    <div class="modal-body step-5" data-step="5">
+                        This is the fifth step.
+                    </div>
+                    <div class="modal-body step-6" data-step="6">
+                        This is the sixth step.
+                    </div>
+                    <div class="modal-body step-7" data-step="7">
                         This is the final step.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
                         <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
-                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Continue</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
                         <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Continue</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
+                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>
                     </div>
                 </div>
             </div>
@@ -278,6 +359,7 @@
         }
         </script>
         <!--registration modal end-->
+        <!-- #endregion -->
     </div>
 </body>
 
