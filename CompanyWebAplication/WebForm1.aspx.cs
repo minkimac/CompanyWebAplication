@@ -15,6 +15,15 @@ namespace CompanyWebAplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string cs = Utility.ConnectionString;
+
+            using (SqlConnection con = new SqlConnection(cs))
+            {
+            }
+            
+            
+
+
 
         }
     }
