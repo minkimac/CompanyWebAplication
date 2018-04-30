@@ -14,6 +14,24 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/popper.min.js"></script>
     <link href="Assets/FontAwesome/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="Content/jquery-ui.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-ui.js"></script>
+   <%--Searching for product script autocomplete --%>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtSearchBox").autocomplete({
+                source: 'DataHandler.ashx',
+                select: function (event, ui) {
+                    $("#txtName").val(ui.item.label);
+                    alert(ui.item.label);
+                    return false;
+                }
+            });
+            
+        });
+    </script>
+  
     <script type="text/javascript">
 
         $(document).ready(function ()
@@ -107,7 +125,7 @@
                 </div>
                 <div class="col-lg-7 col-md-9 align-self-center container-fluid">
                     <div class="input-group ">
-                        <input class="form-control" placeholder="Search for a product..." />
+                        <input class="form-control" id="txtSearchBox" placeholder="Search for a product..." />
                         <span class="input-group-append">
                             <button class="btn btn-primary fa fa-search "></button>
                         </span>

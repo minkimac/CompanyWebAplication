@@ -313,8 +313,11 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.ttf" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff2" />
+    <Content Include="DataHandler.ashx" />
     <None Include="packages.config" />
     <Content Include="JavaScript\JavaScript.js" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\multi-step-modal.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -373,6 +376,9 @@
     <Content Include="WebService\WebService1.asmx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHandler.ashx.cs">
+      <DependentUpon>DataHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Index.Master.cs">
       <DependentUpon>Index.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
