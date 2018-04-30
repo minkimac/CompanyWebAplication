@@ -16,3 +16,15 @@
 {
     padding:25px;
 }
+
+.otpTextBox
+{
+    width:50px;
+    border:none;
+    outline:none;
+}
+
+.otpTextBox:focus
+{
+    outline:none;
+}

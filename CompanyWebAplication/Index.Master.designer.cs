@@ -31,6 +31,15 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder Carousel2;
         
         /// <summary>
+        /// OTPBoxHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder OTPBoxHolder;
+        
+        /// <summary>
         /// SubmitBtn control.
         /// </summary>
         /// <remarks>
@@ -130,13 +139,13 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCity;
         
         /// <summary>
-        /// txtZipcode control.
+        /// txtZipCode_ control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtZipcode;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtZipCode_;
         
         /// <summary>
         /// txtState control.
@@ -182,5 +191,32 @@ namespace CompanyWebAplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCountry;
+        
+        /// <summary>
+        /// txtMobileNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtMobileNumber;
+        
+        /// <summary>
+        /// txtLandlineNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtLandlineNumber;
+        
+        /// <summary>
+        /// txtEmailAutoFill control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtEmailAutoFill;
     }
 }

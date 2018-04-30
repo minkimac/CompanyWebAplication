@@ -106,19 +106,19 @@
                     </a>
                 </div>
                 <div class="col-lg-7 col-md-9 align-self-center container-fluid">
-                    <div class="input-group ">
-                        <input class="form-control" placeholder="Search for a product..." />
+                    <div class="input-group">
+                        <input id="txtSearchBox" class="form-control" placeholder="Search for a product..." />
                         <span class="input-group-append">
-                            <button class="btn btn-primary fa fa-search "></button>
+                            <button id="btnSearch" class="btn btn-primary fa fa-search "></button>
                         </span>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                        <a href="#" class=" btn btn-primary" role="button">
-                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#registrationModal">Sign up</span>
+                        <a id="linkSignup" href="#" class="btn btn-primary" role="button">
+                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#modalRegistration">Sign up</span>
                         </a>
-                        <a href="#" class=" btn btn-primary " role="button" data-toggle="modal" data-target="#loginModal" >
+                        <a id="linkLogin" href="#" class=" btn btn-primary " role="button" data-toggle="modal" data-target="#loginModal" >
                           <span class="fas fa-user flex-sm-fill">&nbspLogin</span>
                         </a>
                     </div>
@@ -157,6 +157,12 @@
 
             </asp:ContentPlaceHolder>
         </div>
+
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="OTPBoxHolder" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
                      
         <!--Footer start-->
          <footer class="container-fluid p-0" id="footer" >
@@ -177,8 +183,6 @@
             </div>
         </footer>
         <!--Footer end-->
-        
-        <!-- Button to Open the Modal -->
 
         <!-- The Modal -->
         <div class="modal fade" id="loginModal" onclose="(){window.opener.location.href = window.opener.location.href;}">
@@ -188,21 +192,17 @@
               <!-- Modal Header -->
               <div class="modal-header">
                 <h4 class="modal-title">Login</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <button id="btnCloseModal" type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
 
               <!-- Modal body -->
-              <div class="modal-body">mail
+              <div class="modal-body">
                  <form runat="server">
                       <div class="form-group">
-                        <label for="email">Email address:</label>
-                      
-                        <input type="email" class="form-control" id="mail" onkeyup="checkInput()">
-                          
+                        <input type="email" placeholder="Username" class="form-control" id="txtLoginUsername" onkeyup="checkInput()">                          
                       </div>
                       <div class="form-group">
-                        <label for="pwd">Password:</label>
-                        <input type="password" class="form-control" id="pwd">
+                        <input type="password" placeholder="password" class="form-control" id="txtLoginPassword">
                       </div>
                       <div class="form-check">
                         <label class="form-check-label">
@@ -227,7 +227,7 @@
         
         <!-- #region Test -->
         <!--Register user Modal Start-->
-        <div class="modal multi-step" id="registrationModal">
+        <div class="modal multi-step" id="modalRegistration">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -297,7 +297,7 @@
                                     <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
+                                    <input type="text" class="form-control" id="txtZipCode_" placeholder="Zipcode" runat="server"/> 
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="txtState" placeholder="State" runat="server"/>
@@ -322,7 +322,15 @@
                         </div>
                     </div>
                     <div class="modal-body step-4" data-step="4">
-                        This is the fourth step.
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="txtMobileNumber" placeholder="Mobile number" runat="server" required/> 
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="txtLandlineNumber" placeholder="Landline number" runat="server"/> 
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="txtEmailAutoFill" placeholder="Email" runat="server" disabled/>
+                        </div> 
                     </div>
                     <div class="modal-body step-5" data-step="5">
                         This is the fifth step.
@@ -335,18 +343,18 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
-                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>
+                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#modalRegistration', 2)">Next</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#modalRegistration', 1)">Back</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#modalRegistration', 3)">Next</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#modalRegistration', 2)">Back</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#modalRegistration', 4)">Next</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#modalRegistration', 3)">Back</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#modalRegistration', 5)">Next</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#modalRegistration', 4)">Back</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#modalRegistration', 6)">Next</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#modalRegistration', 5)">Back</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#modalRegistration', 7)">Next</button>
+                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#modalRegistration', 6)">Back</button>
                     </div>
                 </div>
             </div>
