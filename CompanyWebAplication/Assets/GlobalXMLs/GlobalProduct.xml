@@ -7,7 +7,7 @@
       <ClassificationLevel1>Triple Door</ClassificationLevel1>
       <ClassificationLevel1>Four Door/French Door</ClassificationLevel1>
       <ClassificationLevel1>SideBySide Door</ClassificationLevel1>
-      
+
       <ClassificationLevel2>215 Ltr</ClassificationLevel2>
       <ClassificationLevel2>185 Ltr</ClassificationLevel2>
       <ClassificationLevel2>190 Ltr</ClassificationLevel2>
@@ -17,18 +17,18 @@
     </Classification>
 
   </Refrigerator>
-  
+
   <WashingMachine>
     <Classification>
       <ClassificationLevel1>FrontLoad</ClassificationLevel1>
       <ClassificationLevel1>TopLoad</ClassificationLevel1>
       <ClassificationLevel1>Semi-Automatic</ClassificationLevel1>
-      
+
       <ClassificationLevel2>6 Kg</ClassificationLevel2>
       <ClassificationLevel2>7 Kg</ClassificationLevel2>
       <ClassificationLevel2>8 Kg</ClassificationLevel2>
       <ClassificationLevel2>10 Kg</ClassificationLevel2>
-      
+
     </Classification>
   </WashingMachine>
 
@@ -53,17 +53,131 @@
       <ClassificationLevel2>Trackpad</ClassificationLevel2>
       <ClassificationLevel2>Display</ClassificationLevel2>
       <ClassificationLevel2>Others</ClassificationLevel2>
-     
+
     </Classification>
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
   </Laptop_Repair_and_Maintainance>
+  <MobileRepair>
+    <Classification>
+      <ClassificationLevel1 category="Samsung">
+        <Level1.1>S7 Edge</Level1.1>
+        <Level1.1>S7</Level1.1>
+        <Level1.1>S6 EdgePlus</Level1.1>
+        <Level1.1>Galaxy S5</Level1.1>
+        <Level1.1>Galaxy S4</Level1.1>
+        <Level1.1>Galaxy Note 4</Level1.1>
+        <Level1.1>Galaxy Note 3</Level1.1>
+        <Level1.1>Note 5</Level1.1>
+        <Level1.1>Galaxy S6 Edge</Level1.1>
+        <Level1.1>Galaxy S6</Level1.1>
+        <Level1.1>Galaxy S Duos</Level1.1>
+        <Level1.1>Galaxy J7</Level1.1>
+      </ClassificationLevel1>
+
+      <ClassificationLevel1 category="Xiaomi">
+        <Level1.2>Redmi Note 3</Level1.2>
+        <Level1.2>Redmi 3S Prime</Level1.2>
+        <Level1.2>Xiaomi Redmi Note 4G</Level1.2>
+        <Level1.2>Xiaomi Redmi 2</Level1.2>
+        <Level1.2>Xiaomi Mi 4i</Level1.2>
+        <Level1.2>Xiaomi Mi 3</Level1.2>
+        <Level1.2>Xiaomi 1S</Level1.2>
+        <Level1.2>Xiaomi 2 Prime</Level1.2>
+        <Level1.2>Xiaomi Redmi Note 4</Level1.2>
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Motorola">
+        <Level1.3>Moto G4/G4 Plus</Level1.3>
+        <Level1.3>Moto Z</Level1.3>
+        <Level1.3>Moto E</Level1.3>
+        <Level1.3>Moto X</Level1.3>
+        <Level1.3>Moto G 1st Gen</Level1.3>
+        <Level1.3>Moto G 2nd Gen</Level1.3>
+        <Level1.3>Moto G 3rd Gen</Level1.3>
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Lenovo">
+        <Level1.4>Vibe K5 Note</Level1.4>
+        <Level1.4>Vibe X3</Level1.4>
+        <Level1.4>Vibe K4 Note</Level1.4>
+        <Level1.4>K3 Note</Level1.4>
+        <Level1.4>A7000</Level1.4>
+        <Level1.4>A6000</Level1.4>
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="OnePlus">
+        <Level1.5>OnePlus One</Level1.5>
+        <Level1.5>OnePlus 2</Level1.5>
+        <Level1.5>OnePlus 3</Level1.5>
+        <Level1.5>OnePlus X</Level1.5>
+        <Level1.5>OnePlus 3T</Level1.5>
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Apple">
+        <Level1.6>iPhone 4/4S</Level1.6>
+        <Level1.6>iPhone 5/5S/5C/SE</Level1.6>
+        <Level1.6>iPhone 6</Level1.6>
+        <Level1.6>iPhone 6S</Level1.6>
+        <Level1.6>iPhone 6 Plus</Level1.6>
+        <Level1.6>iPhone 6S Plus</Level1.6>
+        <Level1.6>iPhone 7</Level1.6>
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Asus">
+        <Level1.7>Zenfone Selfi</Level1.7>
+        <Level1.7>Zenfone 4</Level1.7>
+        <Level1.7>Zenfone 5</Level1.7>
+        <Level1.7>Zenfone 6</Level1.7>
+        <Level1.7>Zenfone Max</Level1.7>
+
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="HTC">
+        <Level1.8>Desire 828</Level1.8>
+        <Level1.8>Desire 728G</Level1.8>
+        <Level1.8>Desire 626</Level1.8>
+        <Level1.8>One X</Level1.8>
+        <Level1.8>One M8</Level1.8>
+        <Level1.8>One M8 Eye</Level1.8>
+        <Level1.8>Desire 816G</Level1.8>
+        <Level1.8>Desire 820</Level1.8>
+        <Level1.8>Desire 826</Level1.8>
+
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Google">
+        <Level1.9>Pixel XL</Level1.9>
+        <Level1.9>Pixel</Level1.9>
+        <Level1.9>LG Nexus 4</Level1.9>
+        <Level1.9>LG Nexus 5</Level1.9>
+        <Level1.9>LG Nexus 5X</Level1.9>
+        <Level1.9>Motorola Nexus 6</Level1.9>
+
+      </ClassificationLevel1>
+      <ClassificationLevel1 category="Blackberry">
+        <Level1.10>Q5</Level1.10>
+        <Level1.10>Q10</Level1.10>
+        <Level1.10>Z10</Level1.10>
+        <Level1.10>Z3</Level1.10>
+        <Level1.10>Classic</Level1.10>
+        <Level1.10>Curve 9320</Level1.10>
+        <Level1.10>9900</Level1.10>
+      </ClassificationLevel1>
+
+      <ClassificationLevel3>Battery Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Camera Replacement (Back)</ClassificationLevel3>
+      <ClassificationLevel3>CharginSpeaker/Mic Replacementg Dock Repair/Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Volume/Power Keys Repair/Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Speaker/Mic Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Volume/Power Keys Repair/Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Touch/LCD Repair/Replacement</ClassificationLevel3>
+      <ClassificationLevel3>Software</ClassificationLevel3>
+      <ClassificationLevel3>Diagnostic (Not sure of the issue/repair work)</ClassificationLevel3>
+
+    </Classification>
+
+
+
+
+
+
+
+
+
+
+  </MobileRepair>
 </Product>
 

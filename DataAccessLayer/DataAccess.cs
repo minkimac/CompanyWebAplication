@@ -46,6 +46,9 @@ namespace DataAccessLayer
 
         public DataSet ExecuteReader()
         {
+            DataSet ds;
+
+            return ds;
         }
     }
 }

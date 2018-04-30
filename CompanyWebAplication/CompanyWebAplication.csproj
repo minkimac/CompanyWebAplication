@@ -287,7 +287,7 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.svg" />
-    <Content Include="Assets\GlobalXMLs\Refrigerator.xml" />
+    <Content Include="Assets\GlobalXMLs\GlobalProduct.xml" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
