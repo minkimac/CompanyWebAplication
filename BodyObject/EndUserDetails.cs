@@ -12,5 +12,8 @@ namespace BodyObject
     {
         string _userType;
         AddressEntity addressEntity;
+
+        public string UserType { get => _userType; set => _userType = value; }
+        public AddressEntity AddressEntity { get => addressEntity; set => addressEntity = value; }
     }
 }

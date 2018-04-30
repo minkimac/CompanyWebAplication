@@ -187,7 +187,7 @@
                 </div>
                 <div class="col-lg-4 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                        <a href="#" class=" btn btn-primary" role="banner">
+                        <a href="https://www.facebook.com/nut.scru/" class=" btn btn-primary" target="_blank" role="banner" >
                           <span class="fas fa-user-plus flex-sm-fill">facebook</span>
                         </a>
                     </div>

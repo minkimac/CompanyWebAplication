@@ -43,5 +43,9 @@ namespace DataAccessLayer
             }
             return noOfRowsAffected;
         }
+
+        public DataSet ExecuteReader()
+        {
+        }
     }
 }

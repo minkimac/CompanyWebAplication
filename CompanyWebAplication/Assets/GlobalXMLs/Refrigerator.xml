@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Product>
+  <Refrigerator>
+    <Classification>
+      <ClassificationLevel1>Single Door</ClassificationLevel1>
+      <ClassificationLevel1>Double Door</ClassificationLevel1>
+      <ClassificationLevel1>Triple Door</ClassificationLevel1>
+      <ClassificationLevel1>Four Door/French Door</ClassificationLevel1>
+      <ClassificationLevel1>SideBySide Door</ClassificationLevel1>
+      
+      <ClassificationLevel2>215 Ltr</ClassificationLevel2>
+      <ClassificationLevel2>185 Ltr</ClassificationLevel2>
+      <ClassificationLevel2>190 Ltr</ClassificationLevel2>
+      <ClassificationLevel2>200 Ltr</ClassificationLevel2>
+      <ClassificationLevel2>245 Ltr</ClassificationLevel2>
+      <ClassificationLevel2>280 Ltr</ClassificationLevel2>
+    </Classification>
+
+  </Refrigerator>
+  
+  <WashingMachine>
+    <Classification>
+      <ClassificationLevel1>FrontLoad</ClassificationLevel1>
+      <ClassificationLevel1>TopLoad</ClassificationLevel1>
+      <ClassificationLevel1>Semi-Automatic</ClassificationLevel1>
+      
+      <ClassificationLevel2>6 Kg</ClassificationLevel2>
+      <ClassificationLevel2>7 Kg</ClassificationLevel2>
+      <ClassificationLevel2>8 Kg</ClassificationLevel2>
+      <ClassificationLevel2>10 Kg</ClassificationLevel2>
+      
+    </Classification>
+  </WashingMachine>
+
+  <Laptop_Repair_and_Maintainance>
+    <Classification>
+      <ClassificationLevel1>HP</ClassificationLevel1>
+      <ClassificationLevel1>Dell</ClassificationLevel1>
+      <ClassificationLevel1>Lenovo</ClassificationLevel1>
+      <ClassificationLevel1>Acer</ClassificationLevel1>
+      <ClassificationLevel1>Asus</ClassificationLevel1>
+      <ClassificationLevel1>Sony</ClassificationLevel1>
+      <ClassificationLevel1>Toshiba</ClassificationLevel1>
+      <ClassificationLevel1>Samsung</ClassificationLevel1>
+      <ClassificationLevel1>HCL</ClassificationLevel1>
+      <ClassificationLevel1>IBM</ClassificationLevel1>
+
+      <ClassificationLevel2>Battery</ClassificationLevel2>
+      <ClassificationLevel2>Keyboard</ClassificationLevel2>
+      <ClassificationLevel2>Mic/Speaker not working</ClassificationLevel2>
+      <ClassificationLevel2>Motherboard</ClassificationLevel2>
+      <ClassificationLevel2>Software/OS</ClassificationLevel2>
+      <ClassificationLevel2>Trackpad</ClassificationLevel2>
+      <ClassificationLevel2>Display</ClassificationLevel2>
+      <ClassificationLevel2>Others</ClassificationLevel2>
+     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      
+    </Classification>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </Laptop_Repair_and_Maintainance>
+</Product>
+

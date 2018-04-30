@@ -37,8 +37,7 @@ namespace CompanyWebAplication
                     Listdata.Add(rdr["ArtifactName"].ToString());
                    
                 }
-
-                
+                                
             }
             JavaScriptSerializer js = new JavaScriptSerializer();
             context.Response.Write(js.Serialize(Listdata));
