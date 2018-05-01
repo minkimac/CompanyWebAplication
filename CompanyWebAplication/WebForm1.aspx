@@ -83,7 +83,7 @@
     </div>
 </asp:Content>
 
-<asp:Content ID="Content2" ContentPlaceHolderID="OTPBoxHolder" runat="server">
+<%--<asp:Content ID="Content2" ContentPlaceHolderID="OTPBoxHolder" runat="server">
     <div class="row">
         <input type="text" class="form-control otpTextBox" runat="server" id="txtOTP1" />
         <input type="text" class="form-control otpTextBox" runat="server" id="txtOTP2" />
@@ -92,4 +92,4 @@
         <input type="text" class="form-control otpTextBox" runat="server" id="txtOTP5" />
         <input type="text" class="form-control otpTextBox" runat="server" id="txtOTP6" />
     </div>
-</asp:Content>
+</asp:Content>--%>
