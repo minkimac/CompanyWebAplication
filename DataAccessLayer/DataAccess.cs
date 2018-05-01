@@ -44,11 +44,11 @@ namespace DataAccessLayer
             return noOfRowsAffected;
         }
 
-        public DataSet ExecuteReader()
-        {
-            DataSet ds;
+        //public DataSet ExecuteReader()
+        //{
+        //    DataSet ds;
 
-            return ds;
-        }
+        //    return ds;
+        //}
     }
 }

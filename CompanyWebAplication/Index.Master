@@ -24,7 +24,8 @@
                 source: 'DataHandler.ashx',
                 select: function (event, ui) {
                     $("#txtName").val(ui.item.label);
-                    alert(ui.item.label);
+                    
+                    $("#btnLoginModal").button().click();
                     return false;
                 }
             });
@@ -134,7 +135,7 @@
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
                         <a href="#" class=" btn btn-primary" role="button">
-                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#registrationModal">Sign up</span>
+                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" id="btnLoginModal" data-target="#registrationModal">Sign up</span>
                         </a>
                         <a href="#" class=" btn btn-primary " role="button" data-toggle="modal" data-target="#loginModal" >
                           <span class="fas fa-user flex-sm-fill">&nbspLogin</span>
