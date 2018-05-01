@@ -306,6 +306,7 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.ttf" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.woff" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.woff2" />
+    <Content Include="Assets\XML\countries.xml"/>
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.eot" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.ttf" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.woff" />
