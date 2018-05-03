@@ -9,6 +9,5 @@ namespace DataAccessLayer
     public class DAL: GlobalConnection
     {
         int a = 3;
-        int a = 2;
     }
 }

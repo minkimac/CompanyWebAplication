@@ -296,17 +296,11 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Global.css" />
     <Content Include="Index.Master" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.eot" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.ttf" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.woff" />
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.woff2" />
-    <Content Include="Assets\XML\countries.xml"/>
+    <Content Include="Assets\GlobalXMLs\countries.xml" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.eot" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.ttf" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.woff" />
@@ -316,19 +310,21 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.woff2" />
     <Content Include="DataHandler.ashx" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="packages.config" />
     <Content Include="JavaScript\JavaScript.js" />
     <Content Include="Content\jquery-ui.css" />
-    <Content Include="Scripts\jquery-ui.js" />
-    <Content Include="Scripts\multi-step-modal.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\multi-step-modal.js" />
     <Content Include="Scripts\esm\popper-utils.js" />
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
@@ -337,6 +333,10 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\GlobalJS.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -435,7 +435,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55267</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

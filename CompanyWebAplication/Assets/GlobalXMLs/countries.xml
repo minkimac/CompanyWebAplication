@@ -1,4 +1,5 @@
-<countries>
+<?xml version="1.0" encoding="utf-8"?>
+  <countries>
   <country code="AF" iso="4">Afghanistan</country>
   <country code="AL" iso="8">Albania</country>
   <country code="DZ" iso="12">Algeria</country>
@@ -51,7 +52,7 @@
   <country code="CK" iso="184">Cook Islands</country>
   <country code="CR" iso="188">Costa Rica</country>
   <country code="CI" iso="384">Cote D'Ivoire</country>
-  <country code="HR" iso="191">Croatia (Local Name: Hrvatska)</country>
+  <country code="HR" iso="191">Croatia</country>
   <country code="CU" iso="192">Cuba</country>
   <country code="CY" iso="196">Cyprus</country>
   <country code="CZ" iso="203">Czech Republic</country>

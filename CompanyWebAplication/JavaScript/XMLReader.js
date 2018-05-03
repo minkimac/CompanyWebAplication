@@ -1,32 +1,30 @@
-﻿function loadXMLDoc()
-{
-    //alert("entered loadXMLDoc");
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-            myFunction(this);
-    };
-
-    //alert("executed myFunction");
-    xmlhttp.open("GET", "Assets\XML\countries.xml", true);
-    //alert("opened xml file");
-    xmlhttp.send();
-}
-
-function myFunction(xml)
-{
-    //alert("vsv");
-    var x, i, xmlDoc, drop;
-    xmlDoc = xml.responseXML;
-    txt = "";
-    x = xmlDoc.getElementsByTagName("countries");
-    //alert("node value :"+x[0].nodeValue);
-    for (i = 0; i < x.length; i++) {
-        txt += x[i].childNodes[0].nodeValue + "<br>";
-    }
-    //alert(txt);
-}
-
+﻿var countriesLoaded = false;
 function getCountryList()
 {
-    
+    if (countriesLoaded == false)
+    {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            parseCountryXML(this);
+            countriesLoaded = true;
+        };
+       
+        //alert("executed myFunction");
+        xmlhttp.open("GET", "assets/globalxmls/countries.xml", true);
+        //alert("opened xml file" );
+        xmlhttp.send();
+    }
+}
+
+function parseCountryXML(xml)
+{
+    var i;
+    var xmlDoc = xml.responseXML;
+    var country;
+    var ddlCountry = document.getElementById("ddlCountry");
+    var x = xmlDoc.getElementsByTagName("country");
+    for (i = 0; i < x.length; i++) {
+        country = "<option>" + x[i].childNodes[0].nodeValue + "</option>";
+        ddlCountry.innerHTML += country;
+    }
 }

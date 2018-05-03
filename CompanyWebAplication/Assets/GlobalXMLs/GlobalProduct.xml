@@ -145,7 +145,6 @@
         <Level1.9>LG Nexus 5</Level1.9>
         <Level1.9>LG Nexus 5X</Level1.9>
         <Level1.9>Motorola Nexus 6</Level1.9>
-
       </ClassificationLevel1>
       <ClassificationLevel1 category="Blackberry">
         <Level1.10>Q5</Level1.10>
@@ -168,16 +167,6 @@
       <ClassificationLevel3>Diagnostic (Not sure of the issue/repair work)</ClassificationLevel3>
 
     </Classification>
-
-
-
-
-
-
-
-
-
-
   </MobileRepair>
 </Product>
 

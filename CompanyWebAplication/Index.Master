@@ -24,9 +24,8 @@
             $("#txtSearchBox").autocomplete({
                 source: 'DataHandler.ashx',
                 select: function (event, ui) {
-                    $("#txtName").val(ui.item.label);
                     
-                    $("#btnLoginModal").button().click();
+                    $("#btnServiceModalHidden").button().click();
                     return false;
                 }
             });
@@ -114,9 +113,9 @@
     </style>
 </head>
 
-<body onload="loadXMLDoc()">
-    <div class="container-fluid bg-dark" style="height:10px;"></div>
-    <div class="container-fluid">
+<body>
+    <div class="container-fluid bg-dark" style="height:0.5px;"></div>
+    <div class="container-fluid p-0">
         <!--Header start-->
          <div class="container-fluid p-0" data-spy="affix" data-offset-top="205" id="header">
             <div class="row bg-dark p-2" style="height:auto;">
@@ -135,128 +134,155 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                        <a href="#" class=" btn btn-primary" role="button">
-                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" id="btnLoginModal" data-target="#registrationModal">Sign up</span>
+                        <a href="#" class=" btn btn-primary" id="btnRegistrationModal"  role="button">
+                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#registrationModal">Sign up</span>
                         </a>
-                        <a href="#" class=" btn btn-primary " role="button" data-toggle="modal" data-target="#loginModal" >
+                        <a href="#" class=" btn btn-primary" id="btnLoginModal" role="button" data-toggle="modal" data-target="#loginModal" >
                           <span class="fas fa-user flex-sm-fill">&nbspLogin</span>
                         </a>
                     </div>
                 </div>
             </div>
+        <nav class="container-fluid bg-dark position-sticky">
+                 <!-- Brand -->
+            <a class="navbar-brand" href="#">Navbar</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler fa fa-arrow-alt-circle-down float-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li> 
+            </ul>
+            </div> 
+        </nav>
         </div>
         <!--Header end-->
 
-            <!-- FIxed Header script-->
-            <script>
-                window.onscroll = function() {toggleFixedHeader()};
+        <!-- FIxed Header script-->
+        <script>
+            window.addEventListener('scroll',toggleFixedHeader);   //OR window.onscroll = function() {toggleFixedHeader()};
+            //window.addEventListener('scroll',smoothScroll);
+            // Get the header
+            var header = document.getElementById("header");
+                var scrollHelperDiv = document.getElementById('smoothScrollHelper');
 
-                // Get the header
-                var header = document.getElementById("header");
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
 
-                // Get the offset position of the navbar
-                var sticky = header.offsetTop;
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function toggleFixedHeader() 
+            {
+                if (window.pageYOffset >= sticky) {
+                $('#smoothScrollHelper').height($('#header').height());
+                header.classList.add("fixed-top");
+                } else {
+                $('#smoothScrollHelper').height("0");
+                header.classList.remove("fixed-top");
+                }
+            } 
 
-                // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-                function toggleFixedHeader() {
-                  if (window.pageYOffset >= sticky) {
-                    header.classList.add("fixed-top");
-                  } else {
-                    header.classList.remove("fixed-top");
-                  }
-                } 
-            </script>
+            function smoothScroll()
+            {  
+            }
+        </script>
 
-            <nav class="container-fluid">
-                <
-            </nav>
+        <div id="smoothScrollHelper"></div>
 
-            <div class="container-fluid">
-                <asp:ContentPlaceHolder ID="Carousel1" runat="server">
+        <div class="container-fluid p-0">
+            <asp:ContentPlaceHolder ID="Carousel1" runat="server">
 
-                </asp:ContentPlaceHolder>
-            </div>
-            <hr />
-            <div class="container-fluid">
-                <asp:ContentPlaceHolder ID="Carousel2" runat="server">
-
-                </asp:ContentPlaceHolder>
-            </div>
-                     
-            <!--Footer start-->
-             <footer class="container-fluid p-0" id="footer" >
-                <div class="row bg-dark card-footer">
-                    <div class="col-lg-4 col-md-3 col-12 text-sm-center">
-                        Copyright NutScrew
-                    </div>
-                    <div class="col-lg-4 col-md-9 col-12 h3 align-self-center container-fluid">
-                        Nutscrew
-                    </div>
-                    <div class="col-lg-4 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
-                        <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                            <a href="https://www.facebook.com/nut.scru/" class=" btn btn-primary" target="_blank" role="banner" >
-                              <span class="fas fa-user-plus flex-sm-fill">facebook</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-            <!--Footer end-->
-        
-            <!-- Button to Open the Modal -->
-
-            <!-- The Modal -->
-            <div class="modal fade" id="loginModal" onclose="(){window.opener.location.href = window.opener.location.href;}">
-              <div class="modal-dialog">
-                <div class="modal-content">
-
-                  <!-- Modal Header -->
-                  <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  </div>
-
-                  <!-- Modal body -->
-                  <div class="modal-body">
-                     <form runat="server">
-                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-align-center fa-user align-content-center"></span>
-                                </div>
-                                <input type="email" class="form-control" id="txtUsernameLogin" placeholder="Username" onkeyup="checkInput()">
-                            </div>
-                         </div>
-                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-align-center fa-lock align-content-center"></span>
-                                </div>
-                                <input type="password" class="form-control" placeholder="Password" id="txtPasswordLogin">
-                            </div>
-                         </div>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Remember me
-                            </label>
-                          </div>
-                     
-                          <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
-                    </form> 
-                </div>
-
-                <!-- Modal footer -->
- 
-                <div class="modal-footer position-fixed">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-
-            </div>
-            </div>
+            </asp:ContentPlaceHolder>
         </div>
+        <hr />
+        <div class="container-fluid" p-0>
+            <asp:ContentPlaceHolder ID="Carousel2" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+                     
+        <!--Footer start-->
+            <footer class="container-fluid p-0" id="footer" >
+            <div class="row bg-dark card-footer">
+                <div class="col-lg-4 col-md-3 col-12 text-sm-center">
+                    Copyright NutScrew
+                </div>
+                <div class="col-lg-4 col-md-9 col-12 h3 align-self-center container-fluid">
+                    Nutscrew
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
+                    <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
+                        <a href="https://www.facebook.com/nut.scru/" class=" btn btn-primary" target="_blank" role="banner" >
+                            <span class="fas fa-user-plus flex-sm-fill">facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--Footer end-->
+
+        <!-- The Login Modal -->
+        <div class="modal fade" id="loginModal" onclose="(){window.opener.location.href = window.opener.location.href;}">
+            <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Login</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form runat="server">
+                        <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-align-center fa-user align-content-center"></span>
+                            </div>
+                            <input type="email" class="form-control" id="txtUsernameLogin" placeholder="Username" onkeyup="checkInput()">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-align-center fa-lock align-content-center"></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" id="txtPasswordLogin">
+                        </div>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                        </div>
+                     
+                        <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
+                </form> 
+            </div>
+
+            <!-- Modal footer -->
+ 
+            <div class="modal-footer position-fixed">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+        </div>
+    </div>
         <!--Login Modal End-->
         
-        <!-- #region Test -->
         <!--Register user Modal Start-->
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog">
@@ -393,7 +419,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text fa fa-user"></span>
                                     </div>
-                                    <select class="form-control" ID="ddlCountry"  runat="server">
+                                    <select class="form-control" ID="ddlCountry" onclick="getCountryList()" runat="server">
                                         <option hidden selected>Select country</option>
                                     </select>
                                 </div>  
@@ -438,7 +464,185 @@
         }
         </script>
         <!--registration modal end-->
-        <!-- #endregion -->
+
+        <!-- Hidden Button to launch Service Request Modal-->
+            <input type="button" class=" btn btn-primary" data-toggle="modal" id="btnServiceModalHidden" data-target="#serviceRequestModal" hidden />
+        <!--Service Request Modal Start-->
+        <div class="modal multi-step" id="serviceRequestModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title step-1" data-step="1">Product details</h4>
+                        <h4 class="modal-title step-2" data-step="2">Reqquest type</h4>
+                        <h4 class="modal-title step-3" data-step="3">Select address</h4>
+                        <h4 class="modal-title step-4" data-step="4">Contact information</h4>
+                        <h4 class="modal-title step-5" data-step="5">Schedule</h4>
+                        <h4 class="modal-title step-6" data-step="6">Review your service request</h4>
+                        <h4 class="modal-title step-7" data-step="7">Terms and conditions</h4>
+                        <div class="m-progress">
+                            <div class="m-progress-bar-wrapper">
+                                <div class="m-progress-bar">
+                                </div>
+                            </div>
+                            <div class="m-progress-stats">
+                                <span class="m-progress-current">
+                                </span>
+                                <span class="m-progress-total">
+                                </span>
+                            </div>
+                            <div class="m-progress-complete">
+                                Completed
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body step-1" data-step="1" runat="server"> <%--Page 1 Product Information--%>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Brand</span>
+                            </div>
+                            <select class="form-control" ID="ddlProductBrandName" onclick="" runat="server">
+                                <option hidden selected>Select brand</option>
+                            </select>
+                        </div>
+                        <div class="form-group input-group" hidden>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Series</span>
+                            </div>
+                            <select class="form-control" ID="ddlProductSeriesName" onclick="" runat="server">
+                                <option hidden selected>Select series</option>
+                            </select>
+                        </div>
+                        <div class="form-group input-group" hidden>
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Model</span>
+                            </div>
+                            <select class="form-control" ID="ddlProductModelName" onclick="" runat="server">
+                                <option hidden selected>Select model</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-body step-2" data-step="2">
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-edit"></span>
+                            </div>
+                            <input type="text" class="form-control" id="Text2" placeholder="First Name" runat="server"/> 
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-edit"></span>
+                            </div>
+                            <input type="text" class="form-control" id="Text3" placeholder="Middle name" runat="server"/> 
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-edit"></span>
+                            </div>
+                            <input type="text" class="form-control" id="Text4" placeholder="Last name" runat="server"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text fa fa-venus-mars"></span>
+                            </div>
+                            <select class="form-control" ID="Select1" runat="server">
+                                <option hidden selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>  
+                    </div>
+                    <div class="modal-body step-3" data-step="3">
+                        <div class="row">
+                            <div class="m-3 p-1"> 
+                                
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-building"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Text6" placeholder="City" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-file-archive"></span>
+                                    </div>
+                                    <input type="number" class="form-control" id="Number1" placeholder="Zip code" runat="server"/>
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-map"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Text7" placeholder="State" runat="server"/>
+                                </div>
+                            </div>
+                            <div class="m-3 p-1">
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-street-view"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Text8" placeholder="Street/Locality" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-map"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Text9" placeholder="District" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-plane"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="Text10" placeholder="Landmark" runat="server"/>
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-user"></span>
+                                    </div>
+                                    <select class="form-control" ID="Select2" onclick="getCountryList()" runat="server">
+                                        <option hidden selected>Select country</option>
+                                    </select>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body step-4" data-step="4">
+                        This is the fourth step.
+                    </div>
+                    <div class="modal-body step-5" data-step="5">
+                        This is the fifth step.
+                    </div>
+                    <div class="modal-body step-6" data-step="6">
+                        This is the sixth step.
+                    </div>
+                    <div class="modal-body step-7" data-step="7">
+                        This is the final step.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
+                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="Scripts/multi-step-modal.js"></script>
+        <script>
+        sendEvent = function(sel, step) {
+            $(sel).trigger('next.m.' + step);
+        }
+        </script>
+        <!--registration modal end-->
     </div>
 </body>
 
