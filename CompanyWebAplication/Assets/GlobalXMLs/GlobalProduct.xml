@@ -75,96 +75,97 @@
       </ClassificationLevel1>
 
       <ClassificationLevel1 category="Xiaomi">
-        <Level1.2>Redmi Note 3</Level1.2>
-        <Level1.2>Redmi 3S Prime</Level1.2>
-        <Level1.2>Xiaomi Redmi Note 4G</Level1.2>
-        <Level1.2>Xiaomi Redmi 2</Level1.2>
-        <Level1.2>Xiaomi Mi 4i</Level1.2>
-        <Level1.2>Xiaomi Mi 3</Level1.2>
-        <Level1.2>Xiaomi 1S</Level1.2>
-        <Level1.2>Xiaomi 2 Prime</Level1.2>
-        <Level1.2>Xiaomi Redmi Note 4</Level1.2>
+        <Level1.1>Redmi Note 3</Level1.1>
+        <Level1.1>Redmi 3S Prime</Level1.1>
+        <Level1.1>Xiaomi Redmi Note 4G</Level1.1>
+        <Level1.1>Xiaomi Redmi 2</Level1.1>
+        <Level1.1>Xiaomi Mi 4i</Level1.1>
+        <Level1.1>Xiaomi Mi 3</Level1.1>
+        <Level1.1>Xiaomi 1S</Level1.1>
+        <Level1.1>Xiaomi 2 Prime</Level1.1>
+        <Level1.1>Xiaomi Redmi Note 4</Level1.1>
       </ClassificationLevel1>
       <ClassificationLevel1 category="Motorola">
-        <Level1.3>Moto G4/G4 Plus</Level1.3>
-        <Level1.3>Moto Z</Level1.3>
-        <Level1.3>Moto E</Level1.3>
-        <Level1.3>Moto X</Level1.3>
-        <Level1.3>Moto G 1st Gen</Level1.3>
-        <Level1.3>Moto G 2nd Gen</Level1.3>
-        <Level1.3>Moto G 3rd Gen</Level1.3>
+        <Level1.1>Moto G4/G4 Plus</Level1.1>
+        <Level1.1>Moto Z</Level1.1>
+        <Level1.1>Moto E</Level1.1>
+        <Level1.1>Moto X</Level1.1>
+        <Level1.1>Moto G 1st Gen</Level1.1>
+        <Level1.1>Moto G 2nd Gen</Level1.1>
+        <Level1.1>Moto G 3rd Gen</Level1.1>
       </ClassificationLevel1>
       <ClassificationLevel1 category="Lenovo">
-        <Level1.4>Vibe K5 Note</Level1.4>
-        <Level1.4>Vibe X3</Level1.4>
-        <Level1.4>Vibe K4 Note</Level1.4>
-        <Level1.4>K3 Note</Level1.4>
-        <Level1.4>A7000</Level1.4>
-        <Level1.4>A6000</Level1.4>
+        <Level1.1>Vibe K5 Note</Level1.1>
+        <Level1.1>Vibe X3</Level1.1>
+        <Level1.1>Vibe K4 Note</Level1.1>
+        <Level1.1>K3 Note</Level1.1>
+        <Level1.1>A7000</Level1.1>
+        <Level1.1>A6000</Level1.1>
       </ClassificationLevel1>
       <ClassificationLevel1 category="OnePlus">
-        <Level1.5>OnePlus One</Level1.5>
-        <Level1.5>OnePlus 2</Level1.5>
-        <Level1.5>OnePlus 3</Level1.5>
-        <Level1.5>OnePlus X</Level1.5>
-        <Level1.5>OnePlus 3T</Level1.5>
+        <Level1.1>OnePlus One</Level1.1>
+        <Level1.1>OnePlus 2</Level1.1>
+        <Level1.1>OnePlus 3</Level1.1>
+        <Level1.1>OnePlus X</Level1.1>
+        <Level1.1>OnePlus 3T</Level1.1>
       </ClassificationLevel1>
       <ClassificationLevel1 category="Apple">
-        <Level1.6>iPhone 4/4S</Level1.6>
-        <Level1.6>iPhone 5/5S/5C/SE</Level1.6>
-        <Level1.6>iPhone 6</Level1.6>
-        <Level1.6>iPhone 6S</Level1.6>
-        <Level1.6>iPhone 6 Plus</Level1.6>
-        <Level1.6>iPhone 6S Plus</Level1.6>
-        <Level1.6>iPhone 7</Level1.6>
+        <Level1.1>iPhone 4/4S</Level1.1>
+        <Level1.1>iPhone 5/5S/5C/SE</Level1.1>
+        <Level1.1>iPhone 6</Level1.1>
+        <Level1.1>iPhone 6S</Level1.1>
+        <Level1.1>iPhone 6 Plus</Level1.1>
+        <Level1.1>iPhone 6S Plus</Level1.1>
+        <Level1.1>iPhone 7</Level1.1>
       </ClassificationLevel1>
       <ClassificationLevel1 category="Asus">
-        <Level1.7>Zenfone Selfi</Level1.7>
-        <Level1.7>Zenfone 4</Level1.7>
-        <Level1.7>Zenfone 5</Level1.7>
-        <Level1.7>Zenfone 6</Level1.7>
-        <Level1.7>Zenfone Max</Level1.7>
+        <Level1.1>Zenfone Selfi</Level1.1>
+        <Level1.1>Zenfone 4</Level1.1>
+        <Level1.1>Zenfone 5</Level1.1>
+        <Level1.1>Zenfone 6</Level1.1>
+        <Level1.1>Zenfone Max</Level1.1>
 
       </ClassificationLevel1>
       <ClassificationLevel1 category="HTC">
-        <Level1.8>Desire 828</Level1.8>
-        <Level1.8>Desire 728G</Level1.8>
-        <Level1.8>Desire 626</Level1.8>
-        <Level1.8>One X</Level1.8>
-        <Level1.8>One M8</Level1.8>
-        <Level1.8>One M8 Eye</Level1.8>
-        <Level1.8>Desire 816G</Level1.8>
-        <Level1.8>Desire 820</Level1.8>
-        <Level1.8>Desire 826</Level1.8>
+        <Level1.1>Desire 828</Level1.1>
+        <Level1.1>Desire 728G</Level1.1>
+        <Level1.1>Desire 626</Level1.1>
+        <Level1.1>One X</Level1.1>
+        <Level1.1>One M8</Level1.1>
+        <Level1.1>One M8 Eye</Level1.1>
+        <Level1.1>Desire 816G</Level1.1>
+        <Level1.1>Desire 820</Level1.1>
+        <Level1.1>Desire 826</Level1.1>
 
       </ClassificationLevel1>
       <ClassificationLevel1 category="Google">
-        <Level1.9>Pixel XL</Level1.9>
-        <Level1.9>Pixel</Level1.9>
-        <Level1.9>LG Nexus 4</Level1.9>
-        <Level1.9>LG Nexus 5</Level1.9>
-        <Level1.9>LG Nexus 5X</Level1.9>
-        <Level1.9>Motorola Nexus 6</Level1.9>
+        <Level1.1>Pixel XL</Level1.1>
+        <Level1.1>Pixel</Level1.1>
+        <Level1.1>LG Nexus 4</Level1.1>
+        <Level1.1>LG Nexus 5</Level1.1>
+        <Level1.1>LG Nexus 5X</Level1.1>
+        <Level1.1>Motorola Nexus 6</Level1.1>
+
       </ClassificationLevel1>
       <ClassificationLevel1 category="Blackberry">
-        <Level1.10>Q5</Level1.10>
-        <Level1.10>Q10</Level1.10>
-        <Level1.10>Z10</Level1.10>
-        <Level1.10>Z3</Level1.10>
-        <Level1.10>Classic</Level1.10>
-        <Level1.10>Curve 9320</Level1.10>
-        <Level1.10>9900</Level1.10>
+        <Level1.1>Q5</Level1.1>
+        <Level1.1>Q10</Level1.1>
+        <Level1.1>Z10</Level1.1>
+        <Level1.1>Z3</Level1.1>
+        <Level1.1>Classic</Level1.1>
+        <Level1.1>Curve 9320</Level1.1>
+        <Level1.1>9900</Level1.1>
       </ClassificationLevel1>
 
-      <ClassificationLevel3>Battery Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Camera Replacement (Back)</ClassificationLevel3>
-      <ClassificationLevel3>CharginSpeaker/Mic Replacementg Dock Repair/Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Volume/Power Keys Repair/Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Speaker/Mic Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Volume/Power Keys Repair/Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Touch/LCD Repair/Replacement</ClassificationLevel3>
-      <ClassificationLevel3>Software</ClassificationLevel3>
-      <ClassificationLevel3>Diagnostic (Not sure of the issue/repair work)</ClassificationLevel3>
+      <ClassificationLevel2>Battery Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Camera Replacement (Back)</ClassificationLevel2>
+      <ClassificationLevel2>CharginSpeaker/Mic Replacementg Dock Repair/Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Volume/Power Keys Repair/Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Speaker/Mic Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Volume/Power Keys Repair/Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Touch/LCD Repair/Replacement</ClassificationLevel2>
+      <ClassificationLevel2>Software</ClassificationLevel2>
+      <ClassificationLevel2>Diagnostic (Not sure of the issue/repair work)</ClassificationLevel2>
 
     </Classification>
   </MobileRepair>
