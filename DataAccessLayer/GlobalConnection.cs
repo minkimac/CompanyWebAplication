@@ -9,6 +9,6 @@ namespace DataAccessLayer
 {
     public class GlobalConnection
     {
-        public string getConnectionString = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
+        public static string getConnectionString = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
     }
 }
