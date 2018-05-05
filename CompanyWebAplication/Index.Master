@@ -262,12 +262,21 @@
                             <input type="password" class="form-control" placeholder="Password" id="txtPasswordLogin">
                         </div>
                         </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Remember me
-                        </label>
+                        <div class="container row">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox"> Remember me
+                                </label>
+                            </div>
+                            <div class="input-group">
+                                <div >
+                                    <a href="#" onclick="openResetPasswordWindow()">
+                                        Forgot password?
+                                    </a>
+                                </div>
+                            </div>
+                            <script>function openResetPasswordWindow(){ window.open('/ResetPassword.aspx', 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350'); }</script>
                         </div>
-                     
                         <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
                 </form> 
             </div>
@@ -293,8 +302,7 @@
                         <h4 class="modal-title step-3" data-step="3">Where do you live?</h4>
                         <h4 class="modal-title step-4" data-step="4">Contact information</h4>
                         <h4 class="modal-title step-5" data-step="5">Verification</h4>
-                        <h4 class="modal-title step-6" data-step="6">Terms and conditions</h4>
-                        <h4 class="modal-title step-7" data-step="7">Success</h4>
+                        <h4 class="modal-title step-6" data-step="6">Finish</h4>
                         <div class="m-progress">
                             <div class="m-progress-bar-wrapper">
                                 <div class="m-progress-bar">
@@ -449,16 +457,18 @@
                     <div class="modal-body step-5" data-step="5">
                         <div class="form-group input-group">
                             <div class="input-group">
-                                <span class="input-group-text">Enter OTP:</span>
+                                <span >We've sent a verification code on your mobile number.<br /> Enter OTP:</span>
                             </div>
-                            <input type="text" class="form-control" id="txtVerificationCode"  runat="server" disabled/>
+                            <input type="text" class="form-control" id="txtVerificationCode"  runat="server"/>
+                        </div>
+                        <div class="form-group input-group">
+                            <div class="input-group">
+                                <a href="#"><span >Resend verification code&nbsp</span></a><span id="spanResenOTPTimer">xx sec.</span>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-body step-6" data-step="6">
-                        This is the sixth step.
-                    </div>
-                    <div class="modal-body step-7" data-step="7">
-                        This is the final step.
+                            <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the <a href="#">Terms and Conditions and Privacy Policy</a>
                     </div>
                     <div class="modal-footer" >
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -472,10 +482,8 @@
                         <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
                         <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
                         <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
-                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>                        
-                        <button ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" onServerClick="BtnSignupModalSubmit_Click" runat="server">Submit</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>                       
+                        <button ID="btnSignupModalSubmit" class="btn btn-primary step step-6" data-step="6" onServerClick="BtnSignupModalSubmit_Click" runat="server">Create my account</button>
                     </div>
                 </div>
             </div>
@@ -643,18 +651,18 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
-                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>
+                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#serviceRequestModal', 2)">Next</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#serviceRequestModal', 1)">Back</button>
+                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#serviceRequestModal', 3)">Next</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#serviceRequestModal', 2)">Back</button>
+                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#serviceRequestModal', 4)">Next</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#serviceRequestModal', 3)">Back</button>
+                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#serviceRequestModal', 5)">Next</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#serviceRequestModal', 4)">Back</button>
+                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#serviceRequestModal', 6)">Next</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#serviceRequestModal', 5)">Back</button>
+                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#serviceRequestModal', 7)">Next</button>
+                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#serviceRequestModal', 6)">Back</button>
                     </div>
                 </div>
             </div>
