@@ -39,10 +39,10 @@
         $(document).ready(function ()
         {
 
-            $("#loginModal").on('shown.bs.modal', function ()
+            $(".modal").on('shown.bs.modal', function ()
             {
 
-                $(this).find('#email').focus();
+                $(this).find('input:*').focus();
 
             });
 
@@ -235,7 +235,7 @@
 
         <!-- The Login Modal -->
         <div class="modal fade" id="loginModal" onclose="(){window.opener.location.href = window.opener.location.href;}">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
 
                 <!-- Modal Header -->
@@ -287,7 +287,7 @@
         <!--Register user Modal Start-->
         <form runat="server">
         <div class="modal multi-step" id="registrationModal">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title step-1" data-step="1">Account details</h4>
@@ -429,10 +429,32 @@
                         </div>
                     </div>
                     <div class="modal-body step-4" data-step="4">
-                        This is the fourth step.
+                        <div class="form-group input-group">
+                            <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-mobile"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtMobileNumber" placeholder="Mobile number" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-phone"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtLandlineNumber" placeholder="Landline" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-envelope"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtEmailAddress" placeholder="Email address" runat="server" disabled/>
+                            </div>
                     </div>
                     <div class="modal-body step-5" data-step="5">
-                        This is the fifth step.
+                        <div class="form-group input-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Enter OTP:</span>
+                            </div>
+                            <input type="text" class="form-control" id="txtVerificationCode"  runat="server" disabled/>
+                        </div>
                     </div>
                     <div class="modal-body step-6" data-step="6">
                         This is the sixth step.
@@ -442,7 +464,8 @@
                     </div>
                     <div class="modal-footer" >
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
+                        <button type="button" id="btnNextStepSignup1" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
+                        <script>$("#btnNextStepSignup1").click(function () { $("#txtEmailAddress").val($("#txtRegisterEmail").val()) })</script>
                         <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
                         <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
                         <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
@@ -473,7 +496,7 @@
             <input type="button" class=" btn btn-primary" data-toggle="modal" id="btnServiceModalHidden" data-target="#serviceRequestModal" hidden />
         <!--Service Request Modal Start-->
         <div class="modal multi-step" id="serviceRequestModal">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title step-1" data-step="1">Product details</h4>

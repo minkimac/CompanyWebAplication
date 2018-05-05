@@ -184,13 +184,40 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCountry;
         
         /// <summary>
-        /// btnSignupModalSubmit control.
+        /// txtMobileNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignupModalSubmit;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtMobileNumber;
+        
+        /// <summary>
+        /// txtLandlineNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtLandlineNumber;
+        
+        /// <summary>
+        /// txtEmailAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtEmailAddress;
+        
+        /// <summary>
+        /// txtVerificationCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtVerificationCode;
         
         /// <summary>
         /// ddlProductBrandName control.
