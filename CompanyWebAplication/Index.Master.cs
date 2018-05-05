@@ -28,6 +28,7 @@ namespace CompanyWebAplication
 
         protected void btnSignupModalSubmit_Click(Object sender, EventArgs e)
         {
+            Response.Write("hwllndckjnsjd");
             string encryptedPwd = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Value, "SHA1");
             BaseUser baseUser = new BaseUser();
             baseUser.LoginId = txtLoginID_Username.Value.ToString();

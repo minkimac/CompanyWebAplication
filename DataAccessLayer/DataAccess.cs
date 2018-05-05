@@ -31,7 +31,7 @@ namespace DataAccessLayer
 
                 }
 
-                catch (Exception e)
+                catch (Exception)
                 {
                     _transaction.Rollback();
                     throw;
@@ -65,7 +65,7 @@ namespace DataAccessLayer
 
                 }
 
-                catch (Exception e)
+                catch (Exception)
                 {
                     _transaction.Rollback();
                     throw;
@@ -181,7 +181,7 @@ namespace DataAccessLayer
                     obj = cmd.ExecuteScalar();
                     _transaction.Commit();
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     _transaction.Rollback();
                     throw;

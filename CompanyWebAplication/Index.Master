@@ -246,7 +246,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form runat="server">
+                    
                         <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -270,7 +270,7 @@
                         </div>
                      
                         <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
-                </form> 
+ 
             </div>
 
             <!-- Modal footer -->
@@ -285,7 +285,7 @@
         <!--Login Modal End-->
         
         <!--Register user Modal Start-->
-        <form runat="server">
+        
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -477,12 +477,12 @@
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
                         <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>                        
-                        <asp:Button ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" OnClick="btnSignupModalSubmit_Click" runat="server" Text="Submit"></asp:Button>
+                        <button type="button" ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" OnServerClick="btnSignupModalSubmit_Click" runat="server" >Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-            </form>
+           
 
         <script src="Scripts/multi-step-modal.js"></script>
         <script>
