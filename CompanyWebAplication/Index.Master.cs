@@ -1,4 +1,4 @@
-﻿using BodyObject.Base;
+﻿
 using BodyObject.BaseClass;
 using System;
 using System.Collections.Generic;
@@ -32,7 +32,7 @@ namespace CompanyWebAplication
             BaseUser baseUser = new BaseUser();
             baseUser.LoginId = txtLoginID_Username.Value.ToString();
             baseUser.Password = encryptedPwd;
-            baseUser.PersonContactNumber=txt
+            
 
         }
     }
