@@ -8,29 +8,23 @@ using System.Data.SqlClient;
 
 namespace DataAccessLayer
 {
-    public class DataAccess: GlobalConnection
+    public class DataAccess : GlobalConnection
     {
         private const int TIMEOUTINTERVAL = 580;
 
-        public static int ExecuteNonQuery(string spName,int IsTimeOutRequired,CommandType cmdtype, params SqlParameter[] sqlParameters)
-        { int noOfRowsAffected=-1;
-
+        public static int ExecuteNonQuery(CommandType cmdType, string CommandText)
+        {
+            int noOfRowsAffected = -1;
             using (SqlConnection connection = new SqlConnection(getConnectionString))
             {
-                SqlTransaction _transaction=null;
+                SqlTransaction _transaction = null;
                 try
                 {
                     _transaction = connection.BeginTransaction();
-                    SqlCommand cmd = new SqlCommand(spName, connection, _transaction);
-                    cmd.CommandType = cmdtype;
-                    cmd.CommandText = spName;
-                    if (sqlParameters != null)
-                    {
-                        foreach (SqlParameter para in sqlParameters)
-                        {
-                            cmd.Parameters.Add(para);
-                        }
-                    }
+                    SqlCommand cmd = new SqlCommand(CommandText, connection, _transaction);
+                    cmd.CommandType = cmdType;
+                    cmd.CommandText = CommandText;
+
                     connection.Open();
                     noOfRowsAffected = cmd.ExecuteNonQuery();
                     _transaction.Commit();
@@ -46,7 +40,7 @@ namespace DataAccessLayer
             return noOfRowsAffected;
         }
 
-        public static int ExecuteNonQuery(CommandType cmdType,string CommandText )
+        public static int ExecuteNonQuery(CommandType cmdType, string commandText, params SqlParameter[] sqlParameters)
         {
             int noOfRowsAffected = -1;
             using (SqlConnection connection = new SqlConnection(getConnectionString))
@@ -55,37 +49,9 @@ namespace DataAccessLayer
                 try
                 {
                     _transaction = connection.BeginTransaction();
-                    SqlCommand cmd = new SqlCommand(CommandText, connection, _transaction);
+                    SqlCommand cmd = new SqlCommand(commandText, connection, _transaction);
                     cmd.CommandType = cmdType;
-                    cmd.CommandText = CommandText;
-                    
-                    connection.Open();
-                    noOfRowsAffected = cmd.ExecuteNonQuery();
-                    _transaction.Commit();
-
-                }
-
-                catch (Exception e)
-                {
-                    _transaction.Rollback();
-                    throw;
-                }
-            }
-            return noOfRowsAffected;
-        }
-
-        public static int ExecuteNonQuery(CommandType cmdType, string CommandText, params SqlParameter[] sqlParameters)
-        {
-            int noOfRowsAffected = -1;
-            using (SqlConnection connection = new SqlConnection(getConnectionString))
-            {
-                SqlTransaction _transaction = null;
-                try
-                {
-                    _transaction = connection.BeginTransaction();
-                    SqlCommand cmd = new SqlCommand(CommandText, connection, _transaction);
-                    cmd.CommandType = cmdType;
-                    cmd.CommandText = CommandText;
+                    cmd.CommandText = commandText;
                     if (sqlParameters != null)
                     {
                         foreach (SqlParameter para in sqlParameters)
@@ -138,7 +104,7 @@ namespace DataAccessLayer
             {
                 try
                 {
-                    using (SqlConnection sqlConnection=new SqlConnection())
+                    using (SqlConnection sqlConnection = new SqlConnection())
                     {
                         SqlCommand sqlCommand = new SqlCommand(commandText, sqlConnection);
                         sqlCommand.CommandType = commandType;
@@ -164,13 +130,13 @@ namespace DataAccessLayer
             return resultdataSet;
         }
 
-        public static DataSet ExecuteDataSet(string getConnectionString, string commandText, CommandType commandType, params SqlParameter[] sqlParameters)
+        public static DataSet ExecuteDataSet(string commandText, CommandType commandType, params SqlParameter[] sqlParameters)
         {
             DataSet resultdataSet = new DataSet();
 
             try
             {
-                using (SqlConnection sqlConnection = new SqlConnection())
+                using (SqlConnection sqlConnection = new SqlConnection(getConnectionString))
                 {
                     SqlCommand sqlCommand = new SqlCommand(commandText, sqlConnection);
                     sqlCommand.CommandType = commandType;
@@ -191,5 +157,74 @@ namespace DataAccessLayer
         }
 
         
-     }
+        public static object ExecuteScalar(string spName, CommandType cmdType, params SqlParameter[] sqlParameters)
+        {
+            object obj = null;
+            using (SqlConnection connection = new SqlConnection(getConnectionString))
+            {
+                SqlTransaction _transaction = null;
+                try
+                {
+                    _transaction = connection.BeginTransaction();
+                    SqlCommand cmd = new SqlCommand(spName, connection, _transaction);
+                    cmd.CommandType = cmdType;
+                    cmd.CommandText = spName;
+                    if (sqlParameters != null)
+                    {
+                        foreach (SqlParameter para in sqlParameters)
+                        {
+                            cmd.Parameters.Add(para);
+                        }
+                    }
+                    connection.Open();
+                    obj = cmd.ExecuteScalar();
+                    _transaction.Commit();
+                }
+                catch (Exception e)
+                {
+                    _transaction.Rollback();
+                    throw;
+                }
+            }
+            return obj;
+        }
+
+        public static int ExecuteNonQuery(string spName, int IsTimeOutRequired, CommandType cmdtype, params SqlParameter[] sqlParameters)
+        {
+            int noOfRowsAffected = -1;
+
+            using (SqlConnection connection = new SqlConnection(getConnectionString))
+            {
+                SqlTransaction _transaction = null;
+                try
+                {
+                    _transaction = connection.BeginTransaction();
+                    SqlCommand cmd = new SqlCommand(spName, connection, _transaction);
+                    cmd.CommandType = cmdtype;
+                    cmd.CommandText = spName;
+                    if (sqlParameters != null)
+                    {
+                        foreach (SqlParameter para in sqlParameters)
+                        {
+                            cmd.Parameters.Add(para);
+                        }
+                    }
+                    connection.Open();
+                    noOfRowsAffected = cmd.ExecuteNonQuery();
+                    _transaction.Commit();
+
+                }
+
+                catch (Exception e)
+                {
+                    _transaction.Rollback();
+                    throw;
+                }
+            }
+            return noOfRowsAffected;
+        }
+
+        
+
+    }
 }
