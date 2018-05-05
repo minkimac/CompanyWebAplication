@@ -109,11 +109,7 @@
                 total_num_steps: $bodies.length,
             });
             if (reset_on_close){
-                //Bootstrap 2.3.2
-                $modal.on('hidden', function () {
-                    reset();
-                    $modal.find('.step-1').show();
-                })
+                    
                 //Bootstrap 3
                 $modal.on('hidden.bs.modal', function () {
                     reset();
