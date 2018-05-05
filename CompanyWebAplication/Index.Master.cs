@@ -1,5 +1,4 @@
-﻿
-using BodyObject.BaseClass;
+﻿using BodyObject.BaseClass;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,20 +20,15 @@ namespace CompanyWebAplication
             }
         }
 
-        protected void txt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnSignupModalSubmit_Click(Object sender, EventArgs e)
+        protected void BtnSignupModalSubmit_Click(Object sender, EventArgs e)
         {
             Response.Write("hwllndckjnsjd");
             string encryptedPwd = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Value, "SHA1");
             BaseUser baseUser = new BaseUser();
             baseUser.LoginId = txtLoginID_Username.Value.ToString();
             baseUser.Password = encryptedPwd;
-            
 
+            Response.Write("<script>alert('Called');</script>");
         }
     }
 }

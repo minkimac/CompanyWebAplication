@@ -16,7 +16,6 @@
     <script src="JavaScript/XMLReader.js"></script>
     <link href="Assets/FontAwesome/css/fontawesome-all.css" rel="stylesheet" />
     <link href="Content/jquery-ui.css" rel="stylesheet" />
-
     <script src="Scripts/jquery-ui.js"></script>
    <%--Searching for product script autocomplete --%>
     <script type="text/javascript">
@@ -285,7 +284,6 @@
         <!--Login Modal End-->
         
         <!--Register user Modal Start-->
-        
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -477,12 +475,11 @@
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
                         <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>                        
-                        <button type="button" ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" OnServerClick="btnSignupModalSubmit_Click" runat="server" >Submit</button>
+                        <button ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" onServerClick="BtnSignupModalSubmit_Click" runat="server">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-           
 
         <script src="Scripts/multi-step-modal.js"></script>
         <script>
