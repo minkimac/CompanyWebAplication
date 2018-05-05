@@ -245,7 +245,7 @@
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form runat="server">
+                    
                         <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -278,7 +278,7 @@
                             <script>function openResetPasswordWindow(){ window.open('/ResetPassword.aspx', 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350'); }</script>
                         </div>
                         <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
-                </form> 
+ 
             </div>
 
             <!-- Modal footer -->
