@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="BaseClass\AddressEntity.cs" />
     <Compile Include="BaseClass\BaseUser.cs" />
-    <Compile Include="BaseClass\Class1.cs" />
     <Compile Include="EndUserDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\GlobalConstants.cs" />
