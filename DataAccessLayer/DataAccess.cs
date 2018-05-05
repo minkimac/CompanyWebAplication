@@ -73,7 +73,7 @@ namespace DataAccessLayer
             }
             return noOfRowsAffected;
         }
-        public static DataTable ExecuteDataTable(string getConnectionString, string commandText, CommandType commandType, params SqlParameter[] sqlParameters)
+        public static DataTable ExecuteDataTable( string commandText, CommandType commandType, params SqlParameter[] sqlParameters)
         {
             DataTable dataTable = new DataTable();
             using (SqlConnection con = new SqlConnection(getConnectionString))
@@ -97,14 +97,14 @@ namespace DataAccessLayer
             return dataTable;
         }
 
-        public static DataSet ExecuteDataSet(string getConnectionString, string commandText, CommandType commandType, bool isTimeOutRequired, params SqlParameter[] sqlParameters)
+        public static DataSet ExecuteDataSet( string commandText, CommandType commandType, bool isTimeOutRequired, params SqlParameter[] sqlParameters)
         {
             DataSet resultdataSet = new DataSet();
             if (isTimeOutRequired)
             {
                 try
                 {
-                    using (SqlConnection sqlConnection = new SqlConnection())
+                    using (SqlConnection sqlConnection = new SqlConnection(getConnectionString))
                     {
                         SqlCommand sqlCommand = new SqlCommand(commandText, sqlConnection);
                         sqlCommand.CommandType = commandType;
@@ -125,11 +125,12 @@ namespace DataAccessLayer
             }
             else
             {
-                resultdataSet = ExecuteDataSet(getConnectionString, commandText, commandType, sqlParameters);
+                resultdataSet = ExecuteDataSet( commandText, commandType, sqlParameters);
             }
             return resultdataSet;
         }
 
+        
         public static DataSet ExecuteDataSet(string commandText, CommandType commandType, params SqlParameter[] sqlParameters)
         {
             DataSet resultdataSet = new DataSet();
@@ -215,7 +216,7 @@ namespace DataAccessLayer
 
                 }
 
-                catch (Exception e)
+                catch (Exception)
                 {
                     _transaction.Rollback();
                     throw;

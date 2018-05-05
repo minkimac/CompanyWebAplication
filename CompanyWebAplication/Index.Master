@@ -285,6 +285,7 @@
         <!--Login Modal End-->
         
         <!--Register user Modal Start-->
+        <form runat="server">
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -439,7 +440,7 @@
                     <div class="modal-body step-7" data-step="7">
                         This is the final step.
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer" >
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
                         <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
@@ -452,11 +453,13 @@
                         <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>
                         <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 7)">Next</button>
-                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>
+                        <button type="button" class="btn btn-primary step step-7" data-step="7" onclick="sendEvent('#registrationModal', 6)">Back</button>                        
+                        <asp:Button ID="btnSignupModalSubmit" class="btn btn-primary step step-7" data-step="7" OnClick="btnSignupModalSubmit_Click" runat="server" Text="Submit"></asp:Button>
                     </div>
                 </div>
             </div>
         </div>
+            </form>
 
         <script src="Scripts/multi-step-modal.js"></script>
         <script>

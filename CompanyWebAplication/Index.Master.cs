@@ -1,7 +1,10 @@
-﻿using System;
+﻿using BodyObject.Base;
+using BodyObject.BaseClass;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -20,6 +23,16 @@ namespace CompanyWebAplication
 
         protected void txt_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        protected void btnSignupModalSubmit_Click(Object sender, EventArgs e)
+        {
+            string encryptedPwd = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Value, "SHA1");
+            BaseUser baseUser = new BaseUser();
+            baseUser.LoginId = txtLoginID_Username.Value.ToString();
+            baseUser.Password = encryptedPwd;
+            baseUser.PersonContactNumber=txt
 
         }
     }
