@@ -134,8 +134,8 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                        <a href="#" class=" btn btn-primary" id="btnRegistrationModal"  role="button">
-                          <span class="fas fa-user-plus flex-sm-fill" data-toggle="modal" data-target="#registrationModal">Sign up</span>
+                        <a href="#" class=" btn btn-primary" id="btnRegistrationModal"  role="button" data-toggle="modal" data-target="#registrationModal">
+                          <span class="fas fa-user-plus flex-sm-fill">Sign up</span>
                         </a>
                         <a href="#" class=" btn btn-primary" id="btnLoginModal" role="button" data-toggle="modal" data-target="#loginModal" >
                           <span class="fas fa-user flex-sm-fill">&nbspLogin</span>
@@ -143,34 +143,38 @@
                     </div>
                 </div>
             </div>
-        <nav class="container-fluid position-sticky bg-dark">
-                 <!-- Brand -->
-            <a class="navbar-brand text-white-50" href="#">Navbar</a>
+            <nav class="navbar navbar-toggleable-md bg-dark navbar-expand-lg">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Navbar</a>
 
-            <!-- Toggler/collapsibe Button -->
-            <button class="navbar-toggler fa fa-arrow-alt-circle-down float-right text-white-50" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Navbar links -->
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link text-white-50" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link text-white-50" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link text-white-50" href="#">Link</a>
-                </li> 
-            </ul>
-            </div> 
-        </nav>
+                <div class="collapse navbar-collapse justify-content-lg-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <!--Header end-->
 
-        <!-- FIxed Header script-->
+        <!-- Fixed Header script-->
         <script>
             window.addEventListener('scroll',toggleFixedHeader);   //OR window.onscroll = function() {toggleFixedHeader()};
             //window.addEventListener('scroll',smoothScroll);
@@ -557,10 +561,11 @@
 
                     <div class="modal-body step-2" data-step="2">
                         <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="Text2" placeholder="First Name" runat="server"/> 
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Installation</span>
+                            </label>
                         </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
