@@ -113,12 +113,12 @@
     </style>
 </head>
 
-<body onload="fixedUL()">
+<body>
     <div class="container-fluid bg-dark" style="height:0.5px;"></div>
     <div class="container-fluid p-0">
         <!--Header start-->
          <div class="container-fluid p-0" data-spy="affix" data-offset-top="205" id="header">
-            <div class="row bg-dark p-2" style="height:auto;">
+            <div class="row bg-dark p-2 m-0" style="height:auto;">
                 <div class="col-lg-2 col-md-3 text-sm-center">
                     <a href="WebForm1.aspx" >
                         <img class="img-fluid" role="link" src="Assets/Company_logo.png"  />
@@ -554,6 +554,7 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="modal-body step-2" data-step="2">
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
