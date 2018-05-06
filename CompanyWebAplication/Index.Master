@@ -383,60 +383,62 @@
                     </div>
                     <div class="modal-body step-3" data-step="3">
                         <div class="row">
-                            <div class="m-3 p-1">
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-home"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtHouseNumber" placeholder="Flat/House no." runat="server"/> 
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-home"></span>
                                 </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-building"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-file-archive"></span>
-                                    </div>
-                                    <input type="number" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-map"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtState" placeholder="State" runat="server"/>
-                                </div>
+                                <input type="text" class="form-control" id="txtHouseNumber" placeholder="Flat/House no." runat="server"/> 
                             </div>
-                            <div class="m-3 p-1">
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-street-view"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtStreet" placeholder="Street/Locality" runat="server"/> 
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-street-view"></span>
                                 </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-map"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server"/> 
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-plane"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="txtLandmark" placeholder="Landmark" runat="server"/>
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-user"></span>
-                                    </div>
-                                    <select class="form-control" ID="ddlCountry" onclick="getCountryList()" runat="server">
-                                        <option hidden selected>Select country</option>
-                                    </select>
-                                </div>  
+                                <input type="text" class="form-control" id="txtStreet" placeholder="Street/Locality" runat="server"/> 
                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-building"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-map"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtDistrict" placeholder="District" runat="server"/> 
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-file-archive"></span>
+                                </div>
+                                <input type="number" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
+                            </div>
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-plane"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtLandmark" placeholder="Landmark" runat="server"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-map"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtState" placeholder="State" runat="server"/>
+                            </div>
+                            <div class="form-group input-group col-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-user"></span>
+                                </div>
+                                <select class="form-control" ID="ddlCountry" onclick="getCountryList()" runat="server">
+                                    <option hidden selected>Select country</option>
+                                </select>
+                            </div>  
                         </div>
                     </div>
                     <div class="modal-body step-4" data-step="4">
@@ -562,82 +564,114 @@
                     <div class="modal-body step-2" data-step="2">
                         <div class="form-group input-group">
                             <label class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input">
-                                <span class="custom-control-indicator"></span>
-                                <span class="custom-control-description">Installation</span>
+                                <input type="checkbox" id="chkInstallation">
+                                <span class="custom-control-description m-1">Installation</span>
                             </label>
                         </div>
                         <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="Text3" placeholder="Middle name" runat="server"/> 
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" id="chkRepair">
+                                <span class="custom-control-description m-1">Repair</span>
+                            </label>
                         </div>
                         <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="Text4" placeholder="Last name" runat="server"/>
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" id="chkService">
+                                <span class="custom-control-description m-1">Service</span>
+                            </label>
                         </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-venus-mars"></span>
-                            </div>
-                            <select class="form-control" ID="Select1" runat="server">
-                                <option hidden selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>  
                     </div>
                     <div class="modal-body step-3" data-step="3">
-                        <div class="row">
-                            <div class="m-3 p-1"> 
-                                
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-building"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="Text6" placeholder="City" runat="server"/> 
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-file-archive"></span>
-                                    </div>
-                                    <input type="number" class="form-control" id="Number1" placeholder="Zip code" runat="server"/>
-                                </div>
-                                <div class="form-group input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text fa fa-map"></span>
-                                    </div>
-                                    <input type="text" class="form-control" id="Text7" placeholder="State" runat="server"/>
-                                </div>
+                        <!-- script to switch existing or new address-->
+                        <script>
+                            $(document).ready(function () {
+                                $("#divProductNewAddress").hide();
+                                $("input[name$='radioSelectAddress']").click(function existingAddressRadioSelected() {
+                                    var value = $(this).val();
+                                    if (value == 0) {
+                                        $("#divProductSelectAddress").show();
+                                        $("#divProductNewAddress").hide();
+                                    }
+                                    else {
+                                        $("#divProductSelectAddress").hide();
+                                        $("#divProductNewAddress").show();
+                                    }
+                                });
+                            });
+                        </script>
+                        <!--Select from existing address-->
+                        <div class="container-fluid p-0">
+                            <div class="radio">
+                              <label><input type="radio" name="radioSelectAddress" id="radioExistingAddress" value="0">&nbsp;Select from existing address</label>
                             </div>
-                            <div class="m-3 p-1">
-                                <div class="form-group input-group">
+                            <div class="form-group input-group col-12 p-0" id="divProductSelectAddress">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-user"></span>
+                                </div>
+                                <select class="form-control" ID="ddlProductSelectAddress" onserverclick="getAddressList" runat="server">
+                                    <option hidden selected>Select address</option>
+                                </select>
+                            </div>  
+                            <div class="radio">
+                              <label><input type="radio" name="radioSelectAddress" id="radioNewAddress" value="1">&nbsp;Enter a new address</label>
+                            </div>
+                        </div>
+                        <!--Enter new address-->
+                        <div class="container-fluid p-0" id="divProductNewAddress">
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-home"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtProductHouseNumber" placeholder="Flat/House no." runat="server"/> 
+                                </div>
+                                <div class="form-group input-group col-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text fa fa-street-view"></span>
                                     </div>
-                                    <input type="text" class="form-control" id="Text8" placeholder="Street/Locality" runat="server"/> 
+                                    <input type="text" class="form-control" id="txtProductStreetName" placeholder="Street/Locality" runat="server"/> 
                                 </div>
-                                <div class="form-group input-group">
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-building"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtProductCityName" placeholder="City" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group col-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text fa fa-map"></span>
                                     </div>
-                                    <input type="text" class="form-control" id="Text9" placeholder="District" runat="server"/> 
+                                    <input type="text" class="form-control" id="txtProductDistrictName" placeholder="District" runat="server"/> 
                                 </div>
-                                <div class="form-group input-group">
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-file-archive"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtProductZipCode" placeholder="Zip code" runat="server"/>
+                                </div>
+                                <div class="form-group input-group col-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text fa fa-plane"></span>
                                     </div>
-                                    <input type="text" class="form-control" id="Text10" placeholder="Landmark" runat="server"/>
+                                    <input type="text" class="form-control" id="txtProductLandmark" placeholder="Landmark" runat="server"/>
                                 </div>
-                                <div class="form-group input-group">
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-map"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtProductStateName" placeholder="State" runat="server"/>
+                                </div>
+                                <div class="form-group input-group col-6">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text fa fa-user"></span>
                                     </div>
-                                    <select class="form-control" ID="Select2" onclick="getCountryList()" runat="server">
+                                    <select class="form-control" ID="ddlProductCountryName" onclick="getCountryList()" runat="server">
                                         <option hidden selected>Select country</option>
                                     </select>
                                 </div>  

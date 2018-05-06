@@ -121,33 +121,6 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtHouseNumber;
         
         /// <summary>
-        /// txtCity control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCity;
-        
-        /// <summary>
-        /// txtZipcode control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtZipcode;
-        
-        /// <summary>
-        /// txtState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtState;
-        
-        /// <summary>
         /// txtStreet control.
         /// </summary>
         /// <remarks>
@@ -155,6 +128,15 @@ namespace CompanyWebAplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtStreet;
+        
+        /// <summary>
+        /// txtCity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCity;
         
         /// <summary>
         /// txtDistrict control.
@@ -166,6 +148,15 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtDistrict;
         
         /// <summary>
+        /// txtZipcode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtZipcode;
+        
+        /// <summary>
         /// txtLandmark control.
         /// </summary>
         /// <remarks>
@@ -173,6 +164,15 @@ namespace CompanyWebAplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtLandmark;
+        
+        /// <summary>
+        /// txtState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtState;
         
         /// <summary>
         /// ddlCountry control.
@@ -256,93 +256,84 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlSelect ddlProductModelName;
         
         /// <summary>
-        /// Text3 control.
+        /// ddlProductSelectAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text3;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlProductSelectAddress;
         
         /// <summary>
-        /// Text4 control.
+        /// txtProductHouseNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductHouseNumber;
         
         /// <summary>
-        /// Select1 control.
+        /// txtProductStreetName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductStreetName;
         
         /// <summary>
-        /// Text6 control.
+        /// txtProductCityName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text6;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductCityName;
         
         /// <summary>
-        /// Number1 control.
+        /// txtProductDistrictName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl Number1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductDistrictName;
         
         /// <summary>
-        /// Text7 control.
+        /// txtProductZipCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text7;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductZipCode;
         
         /// <summary>
-        /// Text8 control.
+        /// txtProductLandmark control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text8;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductLandmark;
         
         /// <summary>
-        /// Text9 control.
+        /// txtProductStateName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text9;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductStateName;
         
         /// <summary>
-        /// Text10 control.
+        /// ddlProductCountryName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text10;
-        
-        /// <summary>
-        /// Select2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect Select2;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlProductCountryName;
     }
 }
