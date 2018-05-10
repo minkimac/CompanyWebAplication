@@ -121,22 +121,22 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtFlat_House_no;
         
         /// <summary>
-        /// txtStreet_Locality control.
+        /// ddlCities control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtStreet_Locality;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCities;
         
         /// <summary>
-        /// txtCity control.
+        /// ddlStreet_Locality control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtCity;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlStreet_Locality;
         
         /// <summary>
         /// txtDistrict control.

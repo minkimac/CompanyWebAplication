@@ -134,7 +134,7 @@
                 </div>
                 <div class="col-lg-3 col-md-5 col-12 align-self-center m-lg-0 m-md-2 m-sm-2 m-2">
                     <div class="align-self-center text-lg-right text-sm-center text-md-left text-center">
-                        <a href="#" class=" btn btn-primary" id="btnRegistrationModal"  role="button" data-toggle="modal" data-target="#registrationModal">
+                        <a href="#" class=" btn btn-primary" id="btnRegistrationModal" onclick="loadRegistrationModalData()"  role="button" data-toggle="modal" data-target="#registrationModal">
                           <span class="fas fa-user-plus flex-sm-fill">Sign up</span>
                         </a>
                         <a href="#" class=" btn btn-primary" id="btnLoginModal" role="button" data-toggle="modal" data-target="#loginModal" >
@@ -391,18 +391,22 @@
                             </div>
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-street-view"></span>
+                                    <span class="input-group-text fa fa-user"></span>
                                 </div>
-                                <input type="text" class="form-control" id="txtStreet_Locality" placeholder="Street/Locality" runat="server"/> 
-                            </div>
+                                <select class="form-control" ID="ddlCities" runat="server">
+                                    <option hidden selected>Select City</option>
+                                </select>
+                            </div> 
                         </div>
                         <div class="row">
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-building"></span>
+                                    <span class="input-group-text fa fa-user"></span>
                                 </div>
-                                       <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
-                            </div>
+                                <select class="form-control" ID="ddlStreet_Locality" runat="server">
+                                    <option hidden selected>Select Street/Locality</option>
+                                </select>
+                            </div>  
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-map"></span>
@@ -435,7 +439,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-user"></span>
                                 </div>
-                                <select class="form-control" ID="ddlCountry" onclick="getCountryList()" runat="server">
+                                <select class="form-control" ID="ddlCountry" runat="server">
                                     <option hidden selected>Select country</option>
                                 </select>
                             </div>  
