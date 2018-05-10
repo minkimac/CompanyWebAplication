@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL.cs" />
+    <Compile Include="MasterDAL.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="GlobalConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
