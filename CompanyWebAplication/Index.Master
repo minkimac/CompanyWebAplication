@@ -387,13 +387,13 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-home"></span>
                                 </div>
-                                <input type="text" class="form-control" id="txtHouseNumber" placeholder="Flat/House no." runat="server"/> 
+                                <input type="text" class="form-control" id="txtFlat_House_no" placeholder="Flat/House no." runat="server"/> 
                             </div>
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-street-view"></span>
                                 </div>
-                                <input type="text" class="form-control" id="txtStreet" placeholder="Street/Locality" runat="server"/> 
+                                <input type="text" class="form-control" id="txtStreet_Locality" placeholder="Street/Locality" runat="server"/> 
                             </div>
                         </div>
                         <div class="row">
@@ -401,7 +401,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-building"></span>
                                 </div>
-                                <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
+                                       <input type="text" class="form-control" id="txtCity" placeholder="City" runat="server"/> 
                             </div>
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
