@@ -94,5 +94,9 @@ namespace CompanyWebAplication.ResetPassword
             return ExecuteSP("sp_ChangePassword", paramList);
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ResetPassword/ResetPassword.aspx");
+        }
     }
 }

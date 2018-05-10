@@ -57,7 +57,7 @@ namespace CompanyWebAplication.ResetPassword
             sbEmailBody.Append("Dear " + UserName + ",<br/><br/>");
             sbEmailBody.Append("Please click on the following link to reset your password");
             sbEmailBody.Append("<br/>");
-            sbEmailBody.Append("http://localhost/CompanyWebAplication/ResetPassword/ChangePassword.aspx?uid=" + UniqueId);
+            sbEmailBody.Append("http://localhost:55267/ResetPassword/ChangePassword.aspx?uid=" + UniqueId);
             sbEmailBody.Append("<br/><br/>");
             sbEmailBody.Append("<b>Nut'Screw Pvt. Ltd</b>");
 
@@ -77,6 +77,10 @@ namespace CompanyWebAplication.ResetPassword
             smtpClient.Send(mailMessage);
         }
 
-       
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+            Response.Redirect("~/CompanyWebAplication/ResetPassword/ResetPassword.aspx");
+        }
     }
 }
