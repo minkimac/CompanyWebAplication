@@ -20,11 +20,12 @@ function getCitiesList()
         xmlhttp.onreadystatechange = function ()
         {
             //alert("ready state changed");
-            parseCities_LocalitiesXML(this);
+            parseCitiesXML(this);
             var i;
+            ddlCities = document.getElementById("ddlCities");
             for (i = 0; i < citiesNode.length; i++)
             {
-                citiesOption = "<option>" + citiesNode[i].childNodes[0].nodeValue + "</option>";
+                citiesOption = "<option value=\"" + citiesNode[i].getAttribute("CityId") + "\">" + citiesNode[i].childNodes[0].nodeValue + "</option>";
                 ddlCities.innerHTML += citiesOption;
             }
             citiesLoaded = true;
@@ -38,42 +39,55 @@ function getCitiesList()
 }
 
 var citiesXMLDoc;
-function parseCities_LocalitiesXML(xml)
+function parseCitiesXML(xml)
 {
     citiesXMLDoc = xml.responseXML;
-    ddlCities = document.getElementById("ddlCities");
     citiesNode = citiesXMLDoc.getElementsByTagName("City");
 }
 
 //load Localities
-function getStreet_LocalityList()
+var street_LocalityNode;
+var street_LocalityOption;
+var ddlStreet_Locality;
+var xmlhttpStreet_Locality;
+function getStreet_LocalityList(cityId)
 {
+    street_LocalityLoaded = false;
     if (street_LocalityLoaded == false)
     {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function ()
+        if (xmlhttpStreet_Locality == null)
+            xmlhttpStreet_Locality = new XMLHttpRequest();
+
+        xmlhttpStreet_Locality.onreadystatechange = function ()
         {
-            alert("ready state changed");
-            parseCities_LocalitiesXML(this);
+            //alert("ready state changed");
+            parseCities_LocalityXML(this, cityId);
             var i;
-            var prevCityNode = "NULL";
-            for (i = 0; i < citiesNode.length; i++)
+            ddlStreet_Locality = document.getElementById("ddlStreet_Locality");
+            for (i = 0; i < street_LocalityNode.length; i++)
             {
-                if (citiesNode[i].childNodes[0].nodeValue != prevCityNode)
+                if (cityId == street_LocalityNode[i].getElementsByTagName("CityId")[0].childNodes[0].nodeValue)
                 {
-                    citiesOption = "<option>" + citiesNode[i].childNodes[0].nodeValue + "</option>";
-                    ddlCities.innerHTML += citiesOption;
+                    street_LocalityOption = "<option>" + street_LocalityNode[i].getElementsByTagName("LocalityName")[0].childNodes[0].nodeValue + "</option>";
+                    ddlStreet_Locality.innerHTML += street_LocalityOption;
                 }
-                prevCityNode = citiesNode[i].childNodes[0].nodeValue;
             }
-            citiesLoaded = true;
+            street_LocalityLoaded = true;
         };
 
         //alert("executed myFunction");
-        xmlhttp.open("GET", "assets/globalxmls/Cities_Localities.xml", true);
+        xmlhttpStreet_Locality.open("GET", "assets/globalxmls/Cities_Localities.xml", true);
         //alert("opened xml file" );
-        xmlhttp.send();
+        xmlhttpStreet_Locality.send();
     }
+}
+
+var street_LocalitiesXMLDoc;
+function parseCities_LocalityXML(xml,cityId)
+{
+    street_LocalitiesXMLDoc = xml.responseXML;
+    street_LocalityNode = street_LocalitiesXMLDoc.getElementsByTagName("Locality");
+    //alert(cityIdNode[3].childNodes[0].parentNode.nodeValue);
 }
 
 //load country list
@@ -88,6 +102,7 @@ function getCountryList()
         {
             parseCountryXML(this);
             var i;
+            var ddlCountry = document.getElementById("ddlCountry");
             for (i = 0; i < countryNode.length; i++)
             {
                 countriesOption = "<option>" + countryNode[i].childNodes[0].nodeValue + "</option>";
@@ -106,6 +121,5 @@ function getCountryList()
 function parseCountryXML(xml)
 {
     var countryXMLDoc = xml.responseXML;
-    var ddlCountry = document.getElementById("ddlCountry");
     countryNode = countryXMLDoc.getElementsByTagName("country");
 }
