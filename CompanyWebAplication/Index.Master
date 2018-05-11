@@ -282,6 +282,7 @@
                             <script>function openResetPasswordWindow(){ window.open('/ResetPassword.aspx', 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350'); }</script>
                         </div>
                         <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
+                         <asp:HiddenField ID="HddnMailVerificationStatus" runat="server" />
                 </form>
             </div>
 
@@ -307,6 +308,7 @@
                         <h4 class="modal-title step-4" data-step="4">Contact information</h4>
                         <h4 class="modal-title step-5" data-step="5">Verification</h4>
                         <h4 class="modal-title step-6" data-step="6">Finish</h4>
+                        
                         <div class="m-progress">
                             <div class="m-progress-bar-wrapper">
                                 <div class="m-progress-bar">

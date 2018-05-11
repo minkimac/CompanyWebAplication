@@ -12,7 +12,7 @@ namespace BodyObject.BaseClass
         string _locality_Street;
         string _city;
         string _cityId;
-        string _locality;
+     
         string _localityId;
         string _landMark;
         string _zipcode;
@@ -26,7 +26,7 @@ namespace BodyObject.BaseClass
         public string Locality_Street { get => _locality_Street; set => _locality_Street = value; }
         public string City { get => _city; set => _city = value; }
         public string CityId { get => _cityId; set => _cityId = value; }
-        public string Locality { get => _locality; set => _locality = value; }
+        
         public string LocalityId { get => _localityId; set => _localityId = value; }
         public string LandMark { get => _landMark; set => _landMark = value; }
         public string Zipcode { get => _zipcode; set => _zipcode = value; }
