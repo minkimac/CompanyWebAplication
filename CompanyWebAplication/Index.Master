@@ -29,7 +29,23 @@
                     return false;
                 }
             });
-            
+
+        $(document).ready(function () {  
+            var uid = GetParameterValues('uid');
+            if (uid != undefined) {
+                $("#uidActivationText").text("Your account is active now. Enter your credentials below to login.").removeAttr("hidden");
+                $("#btnLoginModal").click();
+            }
+            function GetParameterValues(param) {  
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');  
+                for (var i = 0; i < url.length; i++) {  
+                    var urlparam = url[i].split('=');  
+                    if (urlparam[0] == param) {  
+                        return urlparam[1];  
+                    }  
+                }  
+            }  
+        });  
         });
     </script>
   
@@ -246,7 +262,7 @@
                 <h4 class="modal-title">Login</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-
+                <p hidden class="alert-success pl-3 pt-1 pb-1" id="uidActivationText"></p>
                 <!-- Modal body -->
                 <div class="modal-body">
                     <form runat="server">
@@ -267,12 +283,12 @@
                         </div>
                         </div>
                         <div class="container row">
-                            <div class="form-check">
+                            <div class="form-check col-7">
                                 <label class="form-check-label">
                                     <input class="form-check-input" type="checkbox"> Remember me
                                 </label>
                             </div>
-                            <div class="input-group">
+                            <div class="input-group col-5">
                                 <div>
                                     <a href="#" onclick="openResetPasswordWindow()">
                                         Forgot password?
@@ -281,16 +297,11 @@
                             </div>
                             <script>function openResetPasswordWindow(){ window.open('/ResetPassword.aspx', 'winname', 'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=350'); }</script>
                         </div>
-                        <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
+                        <div class="container-fluid p-0 mt-2">
+                            <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
+                        </div>
                 </form>
             </div>
-
-            <!-- Modal footer -->
- 
-            <div class="modal-footer position-fixed">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-
         </div>
         </div>
     </div>
@@ -408,6 +419,13 @@
                                 <select class="form-control" ID="ddlCities" runat="server">
                                     <option hidden selected>Select City</option>
                                 </select>
+                                <script>
+                                    $("#ddlCities").change(function () {
+                                        var cityId = $(this).val();
+                                        $("#ddlStreet_Locality").find('option').remove().end().append('<option hidden selected>Select Street/Locality</option>');
+                                        getStreet_LocalityList(cityId);
+                                    });
+                                </script>
                             </div> 
                             <div class="form-group input-group col-6">
                                 <div class="input-group-prepend">
