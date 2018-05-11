@@ -40,7 +40,7 @@ namespace DataAccessLayer
             return noOfRowsAffected;
         }
 
-        public static int ExecuteNonQuery(CommandType cmdType, string commandText, params SqlParameter[] sqlParameters)
+        public static int ExecuteNonQuery(string commandText, params SqlParameter[] sqlParameters)
         {
             int noOfRowsAffected = -1;
             using (SqlConnection connection = new SqlConnection(getConnectionString))
@@ -50,7 +50,7 @@ namespace DataAccessLayer
                 {
                     _transaction = connection.BeginTransaction();
                     SqlCommand cmd = new SqlCommand(commandText, connection, _transaction);
-                    cmd.CommandType = cmdType;
+                    cmd.CommandType = CommandType.Text; ;
                     cmd.CommandText = commandText;
                     if (sqlParameters != null)
                     {
@@ -225,7 +225,35 @@ namespace DataAccessLayer
             return noOfRowsAffected;
         }
 
-        
+        public static string GetUIDGenerated(string LoginId_UserName)
+        {
+            string UIDGenerated = string.Empty;
+            using (SqlConnection con = new SqlConnection(getConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand("sp_generateUIDforActivationMail", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter paramUsername = new SqlParameter("@LoginId_UserName", LoginId_UserName);
+
+                cmd.Parameters.Add(paramUsername);
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    if (Convert.ToBoolean(rdr["ReturnCode"]))
+                    {
+                         UIDGenerated=rdr["UniqueId"].ToString();
+                        
+                    }
+                    else
+                    {
+                         UIDGenerated = null;
+                    }
+                }
+                return UIDGenerated;
+            }
+        }
 
     }
 }

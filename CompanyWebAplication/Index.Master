@@ -299,6 +299,7 @@
                         </div>
                         <div class="container-fluid p-0 mt-2">
                             <asp:Button runat="server" ID="SubmitBtn" class="btn btn-primary" OnClientClick="Test();" Text="Login"></asp:Button>
+                            <asp:HiddenField ID="HddnMailVerificationStatus" runat="server" />
                         </div>
                 </form>
             </div>
