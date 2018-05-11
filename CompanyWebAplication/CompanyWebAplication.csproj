@@ -321,6 +321,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="packages.config" />
     <Content Include="Content\jquery-ui.css" />
+    <Content Include="JavaScript\Address_XMLReader.js" />
     <Content Include="ResetPassword\ChangePassword.aspx" />
     <Content Include="ResetPassword\ResetPassword.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -440,9 +441,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="JavaScript\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
