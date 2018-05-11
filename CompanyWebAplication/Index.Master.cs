@@ -41,7 +41,7 @@ namespace CompanyWebAplication
             endUser.AddressEntity = new AddressEntity()
             {
                 Flat_House_Number= txtFlat_House_no.Value,
-                Locality_Street= txtStreet_Locality.Value,
+                Locality_Street= ddlStreet_Locality.Value,
                 
                 
                    

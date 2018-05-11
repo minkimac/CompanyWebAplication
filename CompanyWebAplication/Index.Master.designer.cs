@@ -112,13 +112,22 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlSelect ddlGender;
         
         /// <summary>
-        /// txtFlat_House_no control.
+        /// ddlCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFlat_House_no;
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCountry;
+        
+        /// <summary>
+        /// ddlState control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlState;
         
         /// <summary>
         /// ddlCities control.
@@ -139,22 +148,13 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlSelect ddlStreet_Locality;
         
         /// <summary>
-        /// txtDistrict control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDistrict;
-        
-        /// <summary>
         /// txtZipcode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl txtZipcode;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtZipcode;
         
         /// <summary>
         /// txtLandmark control.
@@ -166,22 +166,13 @@ namespace CompanyWebAplication {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtLandmark;
         
         /// <summary>
-        /// txtState control.
+        /// txtFlat_House_no control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtState;
-        
-        /// <summary>
-        /// ddlCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlCountry;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtFlat_House_no;
         
         /// <summary>
         /// txtMobileNumber control.
@@ -290,15 +281,6 @@ namespace CompanyWebAplication {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductCityName;
-        
-        /// <summary>
-        /// txtProductDistrictName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtProductDistrictName;
         
         /// <summary>
         /// txtProductZipCode control.

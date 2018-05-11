@@ -288,7 +288,7 @@
     <Content Include="Assets\FontAwesome\webfonts\fa-brands-400.svg" />
     <Content Include="Assets\FontAwesome\webfonts\fa-regular-400.svg" />
     <Content Include="Assets\FontAwesome\webfonts\fa-solid-900.svg" />
-    <Content Include="Assets\GlobalXMLs\City.xml" />
+    <Content Include="Assets\GlobalXMLs\Cities.xml" />
     <Content Include="Assets\GlobalXMLs\GlobalProduct.xml" />
     <Content Include="Assets\GlobalXMLs\Cities_Localities.xml" />
     <Content Include="Content\bootstrap-grid.css" />
