@@ -51,13 +51,13 @@ namespace CompanyWebAplication.ResetPassword
 
         private void SendPasswordResetEmail(string ToEmail, string UserName, string UniqueId)
         {
-           
+            string s = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority + "/";
             MailMessage mailMessage = new MailMessage("modi.akashbusinesss007@gmail.com", ToEmail);
             StringBuilder sbEmailBody = new StringBuilder();
             sbEmailBody.Append("Dear " + UserName + ",<br/><br/>");
             sbEmailBody.Append("Please click on the following link to reset your password");
             sbEmailBody.Append("<br/>");
-            sbEmailBody.Append("http://localhost:55267/ResetPassword/ChangePassword.aspx?uid=" + UniqueId);
+            sbEmailBody.Append(s+"ResetPassword/ChangePassword.aspx?uid=" + UniqueId);
             sbEmailBody.Append("<br/><br/>");
             sbEmailBody.Append("<b>Nut'Screw Pvt. Ltd</b>");
 
@@ -79,8 +79,10 @@ namespace CompanyWebAplication.ResetPassword
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            
-            Response.Redirect("~/CompanyWebAplication/ResetPassword/ResetPassword.aspx");
+            string s = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority+"/";
+            Console.WriteLine(s);
+            Response.Write(s);
+            //Response.Redirect("~/CompanyWebAplication/ResetPassword/ResetPassword.aspx");  http://localhost:55267 
         }
     }
 }
