@@ -20,7 +20,7 @@ namespace CompanyWebAplication.ResetPassword
                 if (!IsPasswordResetLinkValid())
                 {
                     lblMessage.ForeColor = System.Drawing.Color.Red;
-                    lblMessage.Text = "Password Reset link has expired or is invalid";
+                    lblMessage.Text = "Password Reset link has expired or is invalid.Please try to reset again!";
                 }
             }
         }
@@ -29,6 +29,7 @@ namespace CompanyWebAplication.ResetPassword
         {
             if (ChangeUserPassword())
             {
+                lblMessage.ForeColor = System.Drawing.Color.Green;
                 lblMessage.Text = "Password Changed Successfully!";
             }
             else
@@ -68,7 +69,7 @@ namespace CompanyWebAplication.ResetPassword
         new SqlParameter()
         {
             ParameterName = "@UserName",
-            Value = "l1"
+            Value = FormsAuthentication.HashPasswordForStoringInConfigFile(txtConfirmNewPassword.Text,"SHA1")
         }
     };
 
