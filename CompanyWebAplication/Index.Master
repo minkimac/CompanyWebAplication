@@ -312,205 +312,208 @@
         <div class="modal multi-step" id="registrationModal">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title step-1" data-step="1">Account details</h4>
-                        <h4 class="modal-title step-2" data-step="2">Personal information</h4>
-                        <h4 class="modal-title step-3" data-step="3">Where do you live?</h4>
-                        <h4 class="modal-title step-4" data-step="4">Contact information</h4>
-                        <h4 class="modal-title step-5" data-step="5">Verification</h4>
-                        <h4 class="modal-title step-6" data-step="6">Finish</h4>
-                        <div class="m-progress">
-                            <div class="m-progress-bar-wrapper">
-                                <div class="m-progress-bar">
+                    
+                    <form runat="server" method="post">
+                        <div class="modal-header">
+                            <h4 class="modal-title step-1" data-step="1">Account details</h4>
+                            <h4 class="modal-title step-2" data-step="2">Personal information</h4>
+                            <h4 class="modal-title step-3" data-step="3">Where do you live?</h4>
+                            <h4 class="modal-title step-4" data-step="4">Contact information</h4>
+                            <h4 class="modal-title step-5" data-step="5">Verification</h4>
+                            <h4 class="modal-title step-6" data-step="6">Finish</h4>
+                            <div class="m-progress">
+                                <div class="m-progress-bar-wrapper">
+                                    <div class="m-progress-bar">
+                                    </div>
+                                </div>
+                                <div class="m-progress-stats">
+                                    <span class="m-progress-current">
+                                    </span>
+                                    /
+                                    <span class="m-progress-total">
+                                    </span>
+                                </div>
+                                <div class="m-progress-complete">
+                                    Completed
                                 </div>
                             </div>
-                            <div class="m-progress-stats">
-                                <span class="m-progress-current">
-                                </span>
-                                /
-                                <span class="m-progress-total">
-                                </span>
-                            </div>
-                            <div class="m-progress-complete">
-                                Completed
-                            </div>
                         </div>
-                    </div>
-                    <div class="modal-body step-1" data-step="1" runat="server">
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-envelope"></span>
-                            </div>
-                            <input type="email" class="form-control" id="txtRegisterEmail" placeholder="Email" onkeyup="checkInput()" runat="server"/>
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-user"></span>
-                            </div>
-                            <input type="text" class="form-control" id="txtLoginID_Username" placeholder="Set a username" runat="server"/>
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-lock"></span>
-                            </div>
-                            <input type="password" class="form-control" id="txtPassword" placeholder="Set a password" runat="server"/> 
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-lock"></span>
-                            </div>
-                            <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Re-enter the password" runat="server"/> 
-                        </div>
-                    </div>
-                    <div class="modal-body step-2" data-step="2">
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="txtFirstName" placeholder="First Name" runat="server"/> 
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="txtMiddleName" placeholder="Middle name" runat="server"/> 
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-edit"></span>
-                            </div>
-                            <input type="text" class="form-control" id="txtLastName" placeholder="Last name" runat="server"/>
-                        </div>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text fa fa-venus-mars"></span>
-                            </div>
-                            <select class="form-control" ID="ddlGender" runat="server">
-                                <option hidden selected>Select gender</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                                <option>Other</option>
-                            </select>
-                        </div>  
-                    </div>
-                    <div class="modal-body step-3" data-step="3">
-                        <div class="row"> 
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-user"></span>
-                                </div>
-                                <select class="form-control" ID="ddlCountry" runat="server">
-                                    <option hidden selected>Select Country</option>
-                                </select>
-                            </div>                             
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-user"></span>
-                                </div>
-                                <select class="form-control" ID="ddlState" runat="server">
-                                    <option hidden selected>Select State</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-user"></span>
-                                </div>
-                                <select class="form-control" ID="ddlCities" runat="server">
-                                    <option hidden selected>Select City</option>
-                                </select>
-                                <script>
-                                    $("#ddlCities").change(function () {
-                                        var cityId = $(this).val();
-                                        $("#ddlStreet_Locality").find('option').remove().end().append('<option hidden selected>Select Street/Locality</option>');
-                                        getStreet_LocalityList(cityId);
-                                    });
-                                </script>
-                            </div> 
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-user"></span>
-                                </div>
-                                <select class="form-control" ID="ddlStreet_Locality" runat="server">
-                                    <option hidden selected>Select Street/Locality</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-file-archive"></span>
-                                </div>
-                                <input type="text" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
-                            </div>
-                            <div class="form-group input-group col-6">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-plane"></span>
-                                </div>
-                                <input type="text" class="form-control" id="txtLandmark" placeholder="Landmark" runat="server"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group input-group col-12">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-home"></span>
-                                </div>
-                                <input type="text" class="form-control" id="txtFlat_House_no" placeholder="Flat/House no." runat="server"/> 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-body step-4" data-step="4">
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-mobile"></span>
-                                </div>
-                                <input type="text" class="form-control" id="txtMobileNumber" placeholder="Mobile number" runat="server"/> 
-                            </div>
-                            <div class="form-group input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text fa fa-phone"></span>
-                                </div>
-                                <input type="text" class="form-control" id="txtLandlineNumber" placeholder="Landline" runat="server"/> 
-                            </div>
+                        <div class="modal-body step-1" data-step="1" runat="server">
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text fa fa-envelope"></span>
                                 </div>
-                                <input type="text" class="form-control" id="txtEmailAddress" placeholder="Email address" runat="server" disabled/>
+                                <input type="email" class="form-control" id="txtRegisterEmail" placeholder="Email" onkeyup="checkInput()" runat="server"/>
                             </div>
-                    </div>
-                    <div class="modal-body step-5" data-step="5">
-                        <div class="form-group input-group">
-                            <div class="input-group">
-                                <span >We've sent a verification code on your mobile number.<br /> Enter OTP:</span>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-user"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtLoginID_Username" placeholder="Set a username" runat="server"/>
                             </div>
-                            <input type="text" class="form-control" id="txtVerificationCode"  runat="server"/>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-lock"></span>
+                                </div>
+                                <input type="password" class="form-control" id="txtPassword" placeholder="Set a password" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-lock"></span>
+                                </div>
+                                <input type="password" class="form-control" id="txtConfirmPassword" placeholder="Re-enter the password" runat="server"/> 
+                            </div>
                         </div>
-                        <div class="form-group input-group">
-                            <div class="input-group">
-                                <a href="#"><span >Resend verification code&nbsp</span></a><span id="spanResenOTPTimer">xx sec.</span>
+                        <div class="modal-body step-2" data-step="2">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-edit"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtFirstName" placeholder="First Name" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-edit"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtMiddleName" placeholder="Middle name" runat="server"/> 
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-edit"></span>
+                                </div>
+                                <input type="text" class="form-control" id="txtLastName" placeholder="Last name" runat="server"/>
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text fa fa-venus-mars"></span>
+                                </div>
+                                <select class="form-control" ID="ddlGender" runat="server">
+                                    <option hidden selected>Select gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>  
+                        </div>
+                        <div class="modal-body step-3" data-step="3">
+                            <div class="row"> 
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-user"></span>
+                                    </div>
+                                    <select class="form-control" ID="ddlCountry" runat="server">
+                                        <option hidden selected>Select Country</option>
+                                    </select>
+                                </div>                             
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-user"></span>
+                                    </div>
+                                    <select class="form-control" ID="ddlState" runat="server">
+                                        <option hidden selected>Select State</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-user"></span>
+                                    </div>
+                                    <select class="form-control" ID="ddlCities" runat="server">
+                                        <option hidden selected>Select City</option>
+                                    </select>
+                                    <script>
+                                        $("#ddlCities").change(function () {
+                                            var cityId = $(this).val();
+                                            $("#ddlStreet_Locality").find('option').remove().end().append('<option hidden selected>Select Street/Locality</option>');
+                                            getStreet_LocalityList(cityId);
+                                        });
+                                    </script>
+                                </div> 
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-user"></span>
+                                    </div>
+                                    <select class="form-control" ID="ddlStreet_Locality" runat="server">
+                                        <option hidden selected>Select Street/Locality</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-file-archive"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtZipcode" placeholder="Zip code" runat="server"/>
+                                </div>
+                                <div class="form-group input-group col-6">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-plane"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtLandmark" placeholder="Landmark" runat="server"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group input-group col-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-home"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtFlat_House_no" placeholder="Flat/House no." runat="server"/> 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-body step-6" data-step="6">
-                            <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the <a href="#">Terms and Conditions and Privacy Policy</a>
-                    </div>
-                    <div class="modal-footer" >
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" id="btnNextStepSignup1" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
-                        <script>$("#btnNextStepSignup1").click(function () { $("#txtEmailAddress").val($("#txtRegisterEmail").val()) })</script>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
-                        <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
-                        <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
-                        <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
-                        <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
-                        <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>                       
-                        <button ID="btnSignupModalSubmit" class="btn btn-primary step step-6" data-step="6" onServerClick="BtnSignupModalSubmit_Click" runat="server">Create my account</button>
-                    </div>
+                        <div class="modal-body step-4" data-step="4">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-mobile"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtMobileNumber" placeholder="Mobile number" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-phone"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtLandlineNumber" placeholder="Landline" runat="server"/> 
+                                </div>
+                                <div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text fa fa-envelope"></span>
+                                    </div>
+                                    <input type="text" class="form-control" id="txtEmailAddress" placeholder="Email address" runat="server" disabled/>
+                                </div>
+                        </div>
+                        <div class="modal-body step-5" data-step="5">
+                            <div class="form-group input-group">
+                                <div class="input-group">
+                                    <span >We've sent a verification code on your mobile number.<br /> Enter OTP:</span>
+                                </div>
+                                <input type="text" class="form-control" id="txtVerificationCode"  runat="server"/>
+                            </div>
+                            <div class="form-group input-group">
+                                <div class="input-group">
+                                    <a href="#"><span >Resend verification code&nbsp</span></a><span id="spanResenOTPTimer">xx sec.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body step-6" data-step="6">
+                                <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to the <a href="#">Terms and Conditions and Privacy Policy</a>
+                        </div>
+                        <div class="modal-footer" >
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="btnNextStepSignup1" class="btn btn-primary step step-1" data-step="1" onclick="sendEvent('#registrationModal', 2)">Next</button>
+                            <script>$("#btnNextStepSignup1").click(function () { $("#txtEmailAddress").val($("#txtRegisterEmail").val()) })</script>
+                            <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 1)">Back</button>
+                            <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="sendEvent('#registrationModal', 3)">Next</button>
+                            <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 2)">Back</button>
+                            <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="sendEvent('#registrationModal', 4)">Next</button>
+                            <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 3)">Back</button>
+                            <button type="button" class="btn btn-primary step step-4" data-step="4" onclick="sendEvent('#registrationModal', 5)">Next</button>
+                            <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 4)">Back</button>
+                            <button type="button" class="btn btn-primary step step-5" data-step="5" onclick="sendEvent('#registrationModal', 6)">Next</button>
+                            <button type="button" class="btn btn-primary step step-6" data-step="6" onclick="sendEvent('#registrationModal', 5)">Back</button>                       
+                            <button ID="btnSignupModalSubmit" class="btn btn-primary step step-6" data-step="6" onServerClick="BtnSignupModalSubmit_Click" runat="server">Create my account</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
